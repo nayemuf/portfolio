@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en" class="overflow-x-hidden max-w-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="assets/images/icons/letter-n.png" type="image/x-icon">
+    <title>Nayem Uddin | FullStack Software Developer</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="text-grey-900 overflow-x-hidden max-w-full">
+    <div>
+        <div class="py-8 hidden lg:block" data-aos="fade-down">
+            <div class="container flex justify-between items-center">
+                <a href="" class="flex-grow text-4xl">
+                    <span style="display: flex; justify-content: baseline;">
+                        <img src="assets/images/icons/letter-n.png" alt="nayem-uddin-logo" width="50px" data-aos="fade-right"/>
+                        <b style="margin-top: 6px;">ayem
+                            Uddin</b> </a>
+
+                </span>
+                <div class="flex gap-12 font-bold items-center">
+                    <a href="#services" class="link">Services</a>
+                    <a href="#portfolio" class="link">Portfolio</a>
+                    <a href="#testimonials" class="link">Testimonials</a>
+                    <a href="https://000bloggynayem.000webhostapp.com/" target="_blank" class="link">Blog</a>
+                    <a href="#connect" class="button py-3 px-8 bg-grey-900">Connect</a>
+                </div>
+            </div>
+        </div>
+        <div x-data="{ open : false }" x-data="{ animation: '' }" x-init=";
+			animation = lottie.loadAnimation({
+			container: btn,
+			renderer: 'svg',
+			loop: false,
+			autoplay: false,
+			path: '/assets/site/burger-menu.json'
+		})">
+            <div class="py-10 absolute top-0 w-full lg:hidden z-50 transition-colors">
+                <div class="container flex justify-between items-center">
+
+                    <a href="" class="flex-grow text-4xl">👋</a>
+
+
+                    <div class="w-full h-full flex justify-end items-center">
+                        <div class="w-10 h-10 cursor-pointer relative stroke-primary">
+                            <div id="btn" class="w-10 h-10 cursor-pointer relative fill-current text-brandGreen-main"
+                                @click="
+                            open = !open, 
+                            open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())
+                        "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="absolute inset-0 z-20 bg-blue-300 overflow-scroll" x-show="open" x-cloak
+                x-transition.opacity.duration.500ms>
+                <div class="h-28 bg-blue-300 fixed z-40 w-full"></div>
+                <nav class="mt-28 pb-12 container grid grid-cols-1 divide-y divide-purple-500 divide-opacity-50">
+
+                    <a href="#services" class="block font-semibold text-3xl py-8"
+                        @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Services</a>
+
+                    <a href="#portfolio" class="block font-semibold text-3xl py-8"
+                        @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Portfolio</a>
+
+                    <a href="#testimonials" class="block font-semibold text-3xl py-8"
+                        @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Testimonials</a>
+
+                    <a href="blog" class="block font-semibold text-3xl py-8"
+                        @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Blog</a>
+
+                    <a href="#connect" class="block font-semibold text-3xl py-8"
+                        @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Connect</a>
+
+                </nav>
+            </div>
+        </div>
+        <div id="mobile-menu" class="absolute inset-0 z-20 bg-blue-300 overflow-scroll hidden">
+            <div class="h-28 bg-blue-300 fixed z-40 w-full"></div>
+            <nav class="mt-28 pb-12 container grid grid-cols-1 divide-y divide-purple-500 divide-opacity-50">
+
+                <a href="#services" class="block font-semibold text-3xl py-8">Services</a>
+
+                <a href="#portfolio" class="block font-semibold text-3xl py-8">Portfolio</a>
+
+                <a href="#testimonials" class="block font-semibold text-3xl py-8">Testimonials</a>
+
+                <a href="blog" class="block font-semibold text-3xl py-8">Blog</a>
+
+                <a href="#connect" class="block font-semibold text-3xl py-8">Connect</a>
+
+            </nav>
+        </div>
+
+        <header>
+            <div class="container grid lg:grid-cols-2 gap-12 items-center pt-36 lg:pt-28 pb-24 lg:pb-48">
+
+                <div class="relative" data-aos="fade">
+                    <script>
+                        window.addEventListener('load', function () {
+                            window.responsiveResizeObserver = new ResizeObserver((entries) => {
+                                entries.forEach(entry => {
+                                    const imgWidth = entry.target.getBoundingClientRect().width;
+                                    entry.target.parentNode.querySelectorAll('source').forEach((source) => {
+                                        source.sizes = Math.ceil(imgWidth / window.innerWidth * 100) + 'vw';
+                                    });
+                                });
+                            });
+
+                            document.querySelectorAll('[data-statamic-responsive-images]').forEach(responsiveImage => {
+                                responsiveResizeObserver.onload = null;
+                                responsiveResizeObserver.observe(responsiveImage);
+                            });
+                        });
+                    </script>
+
+                    <picture>
+                        <img class="hidden lg:block absolute top-8 left-0 z-10" data-aos="fade" data-aos-delay="800"
+                            data-aos-once="1"
+                            src="https://d33wubrfki0l68.cloudfront.net/42b55b52cc435b03f1437a0fa12f87f0fc01daf4/0f7ea/assets/site/purple-dots.svg"
+                            alt="purple-dots.svg" width="149" height="93">
+                    </picture>
+
+                    <div class="w-full pb-[100%] h-0 bg-blue-500 lg:rounded-tr-none overflow-hidden relative rounded-full"
+                        data-aos="fade-right" data-aos-delay="400" data-aos-once="true">
+                        <picture>
+                            <img src="assets/images/nayem-uddin.jpg" alt="">
+                            <!--  -->
+                        </picture>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="flex mb-2" data-aos="fade-up">
+                        <img src="https://d33wubrfki0l68.cloudfront.net/6e15034b71981e7553ddb6ba5acdf9b64c152af1/2e27b/assets/site/location.svg"
+                            alt="web designers in etobicoke" class="w-3.5 mr-2" width="512" height="512">
+                        <h1 class="text-base text-grey-600">Full Stack | Backend Development Engineer</h1>
+                    </div>
+                    <h2 class="title mb-6" data-aos="fade-up" data-aos-once="true">I Build Custom <span
+                            class="text-blue-900">Software Solutions</span> That Help Your <span
+                            class="text-blue-900">Business Grow</span></h2>
+                    <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true">I help you increase conversion and
+                        performance in every possible way.</p>
+                    <div class="flex gap-4 text-white mt-8" data-aos="fade-up" data-aos-delay="400"
+                        data-aos-offset="-200" data-aos-once="true">
+                        <a href="assets/resume/resume_of_nayem.pdf" target="_blank" class="button w-44">Explore projects</a>
+                        <a href="#portfolio" class="button w-44">Explore projects</a>
+                        <a href="mailto:dev.nayem11@gmail.com?subject=Wanted to chat about..."
+                            class="button w-44 bg-blue-900 hover:shadow-blue-900/20">Start a project</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="w-full bg-purple-300 h-px mb-8 sm:mb-28"></div>
+
+        <!-- Services -->
+        <div id="services" class="container py-16">
+            <h2 class="title text-center mb-12" data-aos="fade-up">My Services</h2>
+
+            <div class="grid sm:grid-cols-2 gap-8">
+
+
+                <div data-aos="fade-up">
+                    <div
+                        class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-blue-500 p-4 rounded-2xl">
+                                <picture>
+
+                                    <img class="w-8" src="https://img.icons8.com/nolan/64/code--v1.png" alt="dev.svg"
+                                        width="48" height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Server-side Scripting</h3>
+                        </div>
+                        <p><b>🚀 Backend Brilliance Awaits! 🚀 </b> <br> Developing server-side logic to ensure smooth
+                            interactions between the frontend and backend components 💻✨
+                        </p>
+                    </div>
+                </div>
+
+
+                <div data-aos="fade-up">
+                    <div
+                        class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-yellow-300 p-4 rounded-2xl">
+                                <picture>
+
+                                    <img class="w-8" src="https://img.icons8.com/ios-filled/100/api-settings.png"
+                                        alt="seo.svg" width="59.5" height="59.5">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">API Development</h3>
+                        </div>
+
+                        <p><b>🚀 API Maestro Here! Extraordinaire at Your Service! 🌐 </b> <br> As a dedicated backend
+                            developer, I specialize in crafting powerful, scalable APIs from concept to execution. Let
+                            me streamline your data flow, enhance functionality, and elevate your project to new heights
+                            through expert API development. 💻✨</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <div
+                        class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-yellow-300 p-4 rounded-2xl">
+                                <picture>
+                                    <img class="w-8" src="https://img.icons8.com/ios-filled/100/password.png"
+                                        alt="seo.svg" width="59.5" height="59.5">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Security</h3>
+                        </div>
+
+                        <p><b>🔐 Fortify Your Backend with Security Expertise! 🛡️</b> <br> I specialize in
+                            building robust and secure backend services. With a focus on encryption, authentication, and
+                            proactive security measures, I ensure your data stays protected, providing a rock-solid
+                            foundation for your application. Let's make security a priority in your backend development
+                            strategy. 💻✨</p>
+                    </div>
+                </div>
+
+
+                <div data-aos="fade-up">
+                    <div
+                        class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-red-300 p-4 rounded-2xl">
+                                <picture>
+
+                                    <img class="w-8" src="https://img.icons8.com/ios-filled/100/shipping-container.png"
+                                        alt="branding.svg" width="50" height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Containerization</h3>
+                        </div>
+
+                        <p><b>🐳 Containerization at Your Service! 🚀 </b> <br> With a deep understanding of Docker and
+                            Kubernetes, I specialize in seamlessly containerizing projects for optimal deployment,
+                            scalability, and resource efficiency. Let me transform your application into a portable,
+                            easily-managed powerhouse, ensuring a smooth journey from development to production. 💻✨</p>
+                    </div>
+                </div>
+
+
+                <div data-aos="fade-up">
+                    <div
+                        class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-purple-300 p-4 rounded-2xl">
+                                <picture>
+
+                                    <img class="w-8" src="assets/images/icons8-services.gif" alt=" photo.svg" width="48"
+                                        height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Microservices Architecture</h3>
+                        </div>
+
+                        <p><b>🚀 Microservices Maven at Your Service! 🌐</b> <br> As a skilled backend developer, I
+                            excel in
+                            architecting and implementing microservices for seamless project scalability. From modular
+                            design to efficient communication, count on me to create a robust microservices architecture
+                            that powers your project's growth. Let's build a future-proof foundation for your success!
+                            💻✨
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div id="portfolio" class="pt-24 pb-16 relative">
+            <div class="bg-red-300 rounded-l-[3.5rem] absolute top-0 right-0 w-[70%] py-56" data-aos="fade-left"></div>
+            <div class="container relative z-50">
+                <div data-aos="fade-up">
+                    <h3 class="font-bold uppercase tracking-widest text-grey-600">Portfolio</h3>
+                    <h2 class="title">Recent Work</h2>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-8 mt-24">
+                    <a href="https://000bloggynayem.000webhostapp.com" target="_blank" data-aos="fade-right"
+                        class="relative">
+                        <picture>
+                            <img alt="Flint Learning Solutions etobicoke web design"
+                                style="width: 100%; height: 105%; border-radius: 20px;"
+                                src="assets/images/projects/bloggy.png" data-statamic-responsive-images>
+                        </picture>
+
+                        <div
+                            class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div
+                                class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1"
+                                        src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg"
+                                        width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">bloggy.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://bitspondon.com" target="_blank" data-aos="fade-up" class="relative">
+                        <picture>
+                            <img alt="Canada 1 Car Sales etobicoke website design" class="rounded-3xl"
+                                src="assets/images/projects/bitspondon.png" style="height: 105%; width:100%;"
+                                data-statamic-responsive-images>
+                        </picture>
+
+                        <div
+                            class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div
+                                class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1"
+                                        src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg"
+                                        width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">bitspondon.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://bitspondon.com" target="_blank" data-aos="fade-left" class="relative">
+                        <picture>
+                            <img alt="Lather and Steel web design" class="rounded-3xl"
+                                src="assets/images/projects/bitTube.png" style="height: 105%; width:100%;"
+                                data-statamic-responsive-images>
+                        </picture>
+
+                        <div
+                            class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div
+                                class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+                                    <img alt="open car sales website" class="w-5 mb-1"
+                                        src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg"
+                                        width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">lms.bitspondon.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <div class="rounded-3xl relative overflow-hidden pb-[100%]" data-aos="fade-up">
+                        <div class="z-50 absolute inset-0 flex flex-col justify-center text-center items-center">
+                            <p class="font-bold text-3xl mb-8 font-heading">Your website here</p>
+                            <a href="mailto:dev.nayem11@gmail.com?subject=Wanted to chat about..."
+                                class="button px-6">Start a project</a>
+                        </div>
+                        <picture>
+                            <source type="image/webp" media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFDRVVsRVFWUlloYTJYMlk3RE1BaEZMOWovLzdzekdzVXdEd2FiN0tFcGt0VTBqZUd3bUZENmFVMXhJV3EvaWdLTEFuOE4rQkhnVi9wM0dVL1NsUm9BMHd3QktBQ1lnSHF6NjBMTitqb3JZZ3JTQUc1WVgxajNyWUlQSS9ERzg2MGUvb0t1b0RJdlh3VDRUTklwb0xEeU8vZVNqc0FBb0NPVitUU2tBTnd3NHlvS09ZZzBBS00zRUQ2TVFGNGVBN2pIVEVBaDYyUjRINFZjRFpqWGhlWTZWL0FNSXA4Qzg3NVNYMjhoYXFhbHhqUlVCaHFBSnIwdG4zZElEYnNQQUZMV2RaNkNDa0NvTDZVTzBVNGh6a0ZTRWZEdGpHNjBFaUJzM2t1M2NRMnhCNWtBdXQ1SUFaYTIwU09BdFFORUtoS0FERUp3SjJvQW5rTUgwR25VbHlmZlFSek9VOUZEWW8rcFFaaStPNUFxQW9oRHhLZTkyVERBM0QvWDRRa0ZhYmVaZTJTS0FBczZoQmpFV1ZycXNuVGpJak9QSGdFeDQxcTZZdUw5TzJCQVdGcFk3WmphQ05mUXh6azVPU20xUlFCZEE1QVloSnAzeFQ1RGFqd3RSV2Q3TG5aRXE2WENJekhTdkVwQm16VVF4ZStSMXdmYk13ekFRRVlOaGplVEQ1dGVwT0pwOEFoczdGUzVtYkc4Tmdaa21ZK3p2UXppWVNDeVVjdDZnOUkwdkRWRkFPcWpsbTNHSTZ4N1hVSVV4Z25YL1QybFkwZFRFNUhYQ2pXckVVdkw2bmlHQy9WTFhmZVZqd0VHaEZVNzRqcFF2Z1U2a25vOVZseDM5cU0yVHNIN0orbTlpY0JKNGpBTDdtcm5rNUVwUDVZZnRPZzNzMWwrS3FiWm1nZklDMG1QWkc2YytiM3hOTUQ0UDBEZjhSNEEvZ0diYk8rUllsQWppUUFBQUFCSlJVNUVya0pnZ2c9PSIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/41398a35e6c418d5c3a6ca91f7ac0b49acaf1a6b/7ec6d/img/containers/assets/work/yourproject.png/d0fd71091c8ef6c437cb4d39a252646c.webp 800w"
+                                sizes="1px">
+
+                            <source media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFDRVVsRVFWUlloYTJYMlk3RE1BaEZMOWovLzdzekdzVXdEd2FiN0tFcGt0VTBqZUd3bUZENmFVMXhJV3EvaWdLTEFuOE4rQkhnVi9wM0dVL1NsUm9BMHd3QktBQ1lnSHF6NjBMTitqb3JZZ3JTQUc1WVgxajNyWUlQSS9ERzg2MGUvb0t1b0RJdlh3VDRUTklwb0xEeU8vZVNqc0FBb0NPVitUU2tBTnd3NHlvS09ZZzBBS00zRUQ2TVFGNGVBN2pIVEVBaDYyUjRINFZjRFpqWGhlWTZWL0FNSXA4Qzg3NVNYMjhoYXFhbHhqUlVCaHFBSnIwdG4zZElEYnNQQUZMV2RaNkNDa0NvTDZVTzBVNGh6a0ZTRWZEdGpHNjBFaUJzM2t1M2NRMnhCNWtBdXQ1SUFaYTIwU09BdFFORUtoS0FERUp3SjJvQW5rTUgwR25VbHlmZlFSek9VOUZEWW8rcFFaaStPNUFxQW9oRHhLZTkyVERBM0QvWDRRa0ZhYmVaZTJTS0FBczZoQmpFV1ZycXNuVGpJak9QSGdFeDQxcTZZdUw5TzJCQVdGcFk3WmphQ05mUXh6azVPU20xUlFCZEE1QVloSnAzeFQ1RGFqd3RSV2Q3TG5aRXE2WENJekhTdkVwQm16VVF4ZStSMXdmYk13ekFRRVlOaGplVEQ1dGVwT0pwOEFoczdGUzVtYkc4Tmdaa21ZK3p2UXppWVNDeVVjdDZnOUkwdkRWRkFPcWpsbTNHSTZ4N1hVSVV4Z25YL1QybFkwZFRFNUhYQ2pXckVVdkw2bmlHQy9WTFhmZVZqd0VHaEZVNzRqcFF2Z1U2a25vOVZseDM5cU0yVHNIN0orbTlpY0JKNGpBTDdtcm5rNUVwUDVZZnRPZzNzMWwrS3FiWm1nZklDMG1QWkc2YytiM3hOTUQ0UDBEZjhSNEEvZ0diYk8rUllsQWppUUFBQUFCSlJVNUVya0pnZ2c9PSIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/9b46cd82853136a4d3e1e54f3d529a8d909c0ed1/5d956/img/containers/assets/work/yourproject.png/8f1f0dcf4130ef7652b9c9445d8dfc24.png 800w"
+                                sizes="1px">
+
+                            <img class="absolute inset-0"
+                                src="https://d33wubrfki0l68.cloudfront.net/3e764f8540663a208fda9569f022451d86014d04/647f0/assets/work/yourproject.png"
+                                alt="yourproject.png" width="800" height="800" data-statamic-responsive-images>
+                        </picture>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- methodology -->
+        <div class="container pt-24 pb-16">
+            <div class="flex flex-col sm:flex-row">
+                <div class="w-full sm:w-2/5" data-aos="fade-right">
+                    <h3 class="font-bold uppercase tracking-widest text-grey-600">Methodology</h3>
+                    <h2 class="title">My Process</h2>
+                </div>
+                <div class="w-full sm:w-3/5 flex flex-col gap-4">
+
+
+                    <div data-aos="fade-left">
+                        <div
+                            class="p-8 rounded-3xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-blue-900 mr-2"></div>
+                                <p class="font-bold tracking-widest text-blue-900">Phase 1</p>
+                            </div>
+                            <h4 class="font-bold text-4xl mb-2">Discovery</h4>
+                            <p>This is the phase where I dive deep into your world and get to know you. Before I can
+                                properly design your high-performing website, I need to understand you, your
+                                pain-points, and your audience.</p>
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left">
+                        <div
+                            class="p-8 rounded-3xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-yellow-900 mr-2"></div>
+                                <p class="font-bold tracking-widest text-yellow-900">Phase 2</p>
+                            </div>
+                            <h4 class="font-bold text-4xl mb-2">Design</h4>
+                            <p>I take what I’ve learned about you & craft a bespoke website that’s tailored to meet your
+                                unique needs, all while accurately representing your brand & keeping things
+                                aesthetically pleasing & useable for your audience.</p>
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left">
+                        <div class="p-8 rounded-3xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500"
+                            data-aos="fade-left">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-red-900 mr-2"></div>
+                                <p class="font-bold tracking-widest text-red-900">Phase 3</p>
+                            </div>
+                            <h4 class="font-bold text-4xl mb-2">Build</h4>
+                            <p>Once you’re happy with the designs, I will proceed to building them making sure
+                                everything is optimised to follow modern web practices, such as speed, security and
+                                reliability.</p>
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left">
+                        <div class="p-8 rounded-3xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500"
+                            data-aos="fade-left">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-purple-900 mr-2"></div>
+                                <p class="font-bold tracking-widest text-purple-900">Phase 4</p>
+                            </div>
+                            <h4 class="font-bold text-4xl mb-2">Launch</h4>
+                            <p>After I’ve completed the build and double checked everything alongside your approval,
+                                it’s time to launch your website. In this phase I will also provide some training videos
+                                on how you can add content to your website so you can do it yourself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer & Developer testimonials
+        <div id="testimonials" class="bg-red-300 py-24 mb-24">
+            <div class="container">
+                <div class="mb-24" data-aos="fade-up">
+                    <h3 class="font-bold uppercase tracking-widest text-grey-600 text-center">Reviews</h3>
+                    <h2 class="title text-center">Customer Testimonials</h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-20 lg:gap-4 mb-12" data-aos="fade-up">
+
+
+                    <div class="bg-white text-center relative py-12 px-10 pt-16 rounded-xl flex flex-col">
+                        <picture>
+                            <source type="image/webp" media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFHQTBsRVFWUlloY1dXVzR0ZFp4bkhmODk3V0llOTltRm1Kek9aVEdZeW1acWt4YVFsUVZHeENYaWdMYTFnUkZEUkMwWDhCRjU1NFRmd0czZ2xxSGdocUJBb2dsZVdGR25Ba2dURkZqV2p0WlBKWVRLWlpQYnN3MXJ2eVl2SmpSZk4zdFZJRjd4MzcvdGZQLzdQLytGNUpLWEVSL21wai9UdmdQbHZINzV3NXV3YlpWbWVjeTUwblhlTXhpTnVidHlVRDZzakg3WUVheXNycVQ4M1IzOStuckpza1pMZ2ZLQjJEZVBKaExxZVhML3hweHZuL3k4QXA5ZlgwMEovbms1VmtXVVpTbWxTZ29pUVJDRmE0NXhuZTJmYnYzM3RiZnRVQWM2Y1BwV1dEdlhwVmkweXJRR0lNUklpSkZFb2F6RlpUbEthL2RHWXJUdGI4ZnFONi9xcEFKeDk5dlMxbFNNTDV4WjZYVnFaUVF1a0dBbVBBU0lLdEFGdGlVb3pkcDZkM1YyMjd0eSsrTTY3Nzd6NUpPMlpRdGd1ODNPTGN6MFc1enAwaW96TUtBU0lDVUtDa0FTZkZIV0FrUThrR29xOFFDdDlCWGhpTUdjQ21PdTA2ZmZhTFBibm1HKzNxUElNWXpTSUVKUGdrekIya2IxeHcrNXdRbUNmdmVFUUpkTzdmQ3JBcDg4L2YrMjU5VFg2dlM3ejNRNkh1bTNhcllMTVdwVFNSSVFtSklhMVIrOVA4R0ladTBpZTdhUDExQWhNQjVqcmRMdjlicGVxTE1tekRHTU1TbW1VVW1pdGtDUklqQUNJQ0Vack1wdVJaem5HVGpkNDZnMnIxRE5WbnBNYmc2U0VheHpqbEhDTlJrUUlFU2JPczE5N1JoT1BhenhDd2hpTjFVOEJvTitwNkJZRnBiVm9oT2dEVFFnNGhCQVRqUStNRzgvWWVjWXU0aUtrRU5FQ1drM1B3Qk52Zk9uRno3eXhjdmdRL1U2YlhxdWtLZ29LWTdHaWtKZ0lQdERVbnJwMnVNYVRRa1JpUWdPYUtmR2Z5WUdVbnNtdHBWTVc5S29LcXhURVFQQUI1ejBwZVJxVk1DcVN0S0NWWUZBa0NWaWxacHAwVDd6eitoK3VyajRjREZCS0tITkxWV1MwOG94V1ppbXNwYkNHM0J5YzBtYTA4dnpnWkJtWk1SZzEzWU9wR1hpd04yQlUxOFNVMEZvUUZDb3FZbFFZSlZnbGVLVlFBaWlORm8xTFlJMmVxUTJudW5SNzV3RzNkM1lZaklZNDc0Q0lVaHlFVEhoYzc0U1doQWdrSWk1NEd1K0lLZnIvR2VCM2IvMVIvcmE1ZGZIOWU5c002d21SaElpZ2xLQkZvWlFnY21CMUpESnhEZmNmN3ZMZTFoYTdlM3VmbjZZLzh6VDh3WGUrbmw1OC9qbVc1bnRrb2drdU1wbzBERVkxdzZhaERvbHhqT3pzai9qenhqLzUrZVhMTXkwbk0yOUV1NE45SnM0VFVZZzJxQlF4Sm1Kc1JJVkVUSUhhQlhZR0F6YnYzVzFtMVowWklDRkVVU1FSa2hLU1VpU2xRV25RbWhpaFNjSmc0dm45VzFmeldYVm5Ya3JiblE0bXk0aEs0Uk80R0hFcDRVZzRCSWNpYWt0V2RmbkM1MTRaUGxXQVM2KzhsSmFYamxLVUpTaUZTNUU2QmliQk13bUJPaVk4Z3BpYzN2d0NhK3VuV3ArOStQS0ZXYlNubHVDbEw3NTg0Uk5uejdCMDlCaGxxMEswRUlQSHAwU1REbHdJSkZBS296UGFXWnNqdXNXalVUMTFHWUVaSERpK2Z2TEtzYldQMFoxZndCWVYybVlvWTFEV29JeEJXNDNOTEhtZVVaWWw3VTZQL3VJeUowNmQ1Yld2Zm5kcWkzMWdHNzcybFc5ZU83YTZmbTc5eERxcmk0Zm9sNHFPOWhRNEpEWjQxekN1SGVQYTB3UndZdkc2eE5rdXRXb3pkTEM5ZlpldHpadmN2Yld4K2R2Zi9IUjFab0JMMy9oZSt2Z0xuK1Rvc2VOMHFvclNRRXNjbFhKVTJwT0poK0J3emxQN2dBdUNFMHN0QlkzdVVPc09UaFUwTGpBZTdmRmdlNU90OS83SzdWc2JGMS8vMWMvZS9FQ0FWeTk5YTdoeTRtVHIrUHF6SEZsZXBXeTFFUkxKMWRoVTB6R1JYZzZWVFJpSnBCandJVkVIbUVUTktCaEdxYUJSRmRGVWlMWkF4RGNqaG52M3VmMytCbis1Y1pWZi8rTEg4aDhBWC83YXR5OHNMYTlkV1ZrN3ljTFNDdTN1UERZdkNDRlNUOGE0eVFoTm9GdG9EclV0dmRKUVdrRUorQkFmTDZTQmgrUElmaU0wVXFEek5ublJJczh5dElib2EvYjNIbkJuOHgrOHQvRXV0LzcxOTgzTHYvekpxbnovaHo5S2h4ZVhPTFM0VEtmYkp5OHJsRGI0RUJpTmh1d1BCdFRqTVViRFhMdmtjSzlGdjFQU0xneEdDOTRIOWtZTjl4K051UGR3eUtPUkowcEdVWFhwZEhwVVZVV1JXNVJBOEEzajBZREJveDN1MzduRnZUdWJtUE9mdW9ETkN2S2loY2tLbE5LRUdISGU0MzJnYVJ5Tjg0REdKeUdJSVNoTE5CbEpLeUlCSjVHUlR3eEdEWHY3RTFBZTBSbXRWZ3VJaUFoYUg0eG5Zd3hGVWRMcHpyRjhmSjEvQXhhRXlaaHZKT081QUFBQUFFbEZUa1N1UW1DQyIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/872fb99748fe00266c7e5bcf7d9d7b89bfeeaec1/de758/img/containers/assets/reviews/michael.png/cde67739e8b0304b2c0c698218540cf9.webp 226w, https://d33wubrfki0l68.cloudfront.net/5ff8d0b891a937a45aaff389e29f8b9b6a22fd2e/1959f/img/containers/assets/reviews/michael.png/3322bc70699c387ab44d81bad51455a4.webp 270w, https://d33wubrfki0l68.cloudfront.net/7670740959b87f0b22fdce7e83a8712c83da1d03/7a6ff/img/containers/assets/reviews/michael.png/ab1d96ad6f0b21fed233ff24887515d2.webp 323w, https://d33wubrfki0l68.cloudfront.net/ae342d6cc1bf4f37d53c1b0d248385049dcd98c0/42439/img/containers/assets/reviews/michael.png/3d872fc74cec643342278b08cfce64b1.webp 387w"
+                                sizes="1px">
+
+                            <source media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFHQTBsRVFWUlloY1dXVzR0ZFp4bkhmODk3V0llOTltRm1Kek9aVEdZeW1acWt4YVFsUVZHeENYaWdMYTFnUkZEUkMwWDhCRjU1NFRmd0czZ2xxSGdocUJBb2dsZVdGR25Ba2dURkZqV2p0WlBKWVRLWlpQYnN3MXJ2eVl2SmpSZk4zdFZJRjd4MzcvdGZQLzdQLytGNUpLWEVSL21wai9UdmdQbHZINzV3NXV3YlpWbWVjeTUwblhlTXhpTnVidHlVRDZzakg3WUVheXNycVQ4M1IzOStuckpza1pMZ2ZLQjJEZVBKaExxZVhML3hweHZuL3k4QXA5ZlgwMEovbms1VmtXVVpTbWxTZ29pUVJDRmE0NXhuZTJmYnYzM3RiZnRVQWM2Y1BwV1dEdlhwVmkweXJRR0lNUklpSkZFb2F6RlpUbEthL2RHWXJUdGI4ZnFONi9xcEFKeDk5dlMxbFNNTDV4WjZYVnFaUVF1a0dBbVBBU0lLdEFGdGlVb3pkcDZkM1YyMjd0eSsrTTY3Nzd6NUpPMlpRdGd1ODNPTGN6MFc1enAwaW96TUtBU0lDVUtDa0FTZkZIV0FrUThrR29xOFFDdDlCWGhpTUdjQ21PdTA2ZmZhTFBibm1HKzNxUElNWXpTSUVKUGdrekIya2IxeHcrNXdRbUNmdmVFUUpkTzdmQ3JBcDg4L2YrMjU5VFg2dlM3ejNRNkh1bTNhcllMTVdwVFNSSVFtSklhMVIrOVA4R0ladTBpZTdhUDExQWhNQjVqcmRMdjlicGVxTE1tekRHTU1TbW1VVW1pdGtDUklqQUNJQ0Vack1wdVJaem5HVGpkNDZnMnIxRE5WbnBNYmc2U0VheHpqbEhDTlJrUUlFU2JPczE5N1JoT1BhenhDd2hpTjFVOEJvTitwNkJZRnBiVm9oT2dEVFFnNGhCQVRqUStNRzgvWWVjWXU0aUtrRU5FQ1drM1B3Qk52Zk9uRno3eXhjdmdRL1U2YlhxdWtLZ29LWTdHaWtKZ0lQdERVbnJwMnVNYVRRa1JpUWdPYUtmR2Z5WUdVbnNtdHBWTVc5S29LcXhURVFQQUI1ejBwZVJxVk1DcVN0S0NWWUZBa0NWaWxacHAwVDd6eitoK3VyajRjREZCS0tITkxWV1MwOG94V1ppbXNwYkNHM0J5YzBtYTA4dnpnWkJtWk1SZzEzWU9wR1hpd04yQlUxOFNVMEZvUUZDb3FZbFFZSlZnbGVLVlFBaWlORm8xTFlJMmVxUTJudW5SNzV3RzNkM1lZaklZNDc0Q0lVaHlFVEhoYzc0U1doQWdrSWk1NEd1K0lLZnIvR2VCM2IvMVIvcmE1ZGZIOWU5c002d21SaElpZ2xLQkZvWlFnY21CMUpESnhEZmNmN3ZMZTFoYTdlM3VmbjZZLzh6VDh3WGUrbmw1OC9qbVc1bnRrb2drdU1wbzBERVkxdzZhaERvbHhqT3pzai9qenhqLzUrZVhMTXkwbk0yOUV1NE45SnM0VFVZZzJxQlF4Sm1Kc1JJVkVUSUhhQlhZR0F6YnYzVzFtMVowWklDRkVVU1FSa2hLU1VpU2xRV25RbWhpaFNjSmc0dm45VzFmeldYVm5Ya3JiblE0bXk0aEs0Uk80R0hFcDRVZzRCSWNpYWt0V2RmbkM1MTRaUGxXQVM2KzhsSmFYamxLVUpTaUZTNUU2QmliQk13bUJPaVk4Z3BpYzN2d0NhK3VuV3ArOStQS0ZXYlNubHVDbEw3NTg0Uk5uejdCMDlCaGxxMEswRUlQSHAwU1REbHdJSkZBS296UGFXWnNqdXNXalVUMTFHWUVaSERpK2Z2TEtzYldQMFoxZndCWVYybVlvWTFEV29JeEJXNDNOTEhtZVVaWWw3VTZQL3VJeUowNmQ1Yld2Zm5kcWkzMWdHNzcybFc5ZU83YTZmbTc5eERxcmk0Zm9sNHFPOWhRNEpEWjQxekN1SGVQYTB3UndZdkc2eE5rdXRXb3pkTEM5ZlpldHpadmN2Yld4K2R2Zi9IUjFab0JMMy9oZSt2Z0xuK1Rvc2VOMHFvclNRRXNjbFhKVTJwT0poK0J3emxQN2dBdUNFMHN0QlkzdVVPc09UaFUwTGpBZTdmRmdlNU90OS83SzdWc2JGMS8vMWMvZS9FQ0FWeTk5YTdoeTRtVHIrUHF6SEZsZXBXeTFFUkxKMWRoVTB6R1JYZzZWVFJpSnBCandJVkVIbUVUTktCaEdxYUJSRmRGVWlMWkF4RGNqaG52M3VmMytCbis1Y1pWZi8rTEg4aDhBWC83YXR5OHNMYTlkV1ZrN3ljTFNDdTN1UERZdkNDRlNUOGE0eVFoTm9GdG9EclV0dmRKUVdrRUorQkFmTDZTQmgrUElmaU0wVXFEek5ublJJczh5dElib2EvYjNIbkJuOHgrOHQvRXV0LzcxOTgzTHYvekpxbnovaHo5S2h4ZVhPTFM0VEtmYkp5OHJsRGI0RUJpTmh1d1BCdFRqTVViRFhMdmtjSzlGdjFQU0xneEdDOTRIOWtZTjl4K051UGR3eUtPUkowcEdVWFhwZEhwVVZVV1JXNVJBOEEzajBZREJveDN1MzduRnZUdWJtUE9mdW9ETkN2S2loY2tLbE5LRUdISGU0MzJnYVJ5Tjg0REdKeUdJSVNoTE5CbEpLeUlCSjVHUlR3eEdEWHY3RTFBZTBSbXRWZ3VJaUFoYUg0eG5Zd3hGVWRMcHpyRjhmSjEvQXhhRXlaaHZKT081QUFBQUFFbEZUa1N1UW1DQyIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/3d262a81cf30155e93479112e52f360d116173ab/6e3db/img/containers/assets/reviews/michael.png/820706cc0452b6e75d9b87de4debf521.png 226w, https://d33wubrfki0l68.cloudfront.net/16863a4935abf0a40198ddfe771e0e9e1c16b6b9/81e8e/img/containers/assets/reviews/michael.png/c6841f593fb4d8a20e2e354683e2d4c4.png 270w, https://d33wubrfki0l68.cloudfront.net/7cfc1ddcae37dfd880d466094acc9e5bf785b96b/8d5e1/img/containers/assets/reviews/michael.png/a6602080e6379bec6b37bba80d1c70ab.png 323w, https://d33wubrfki0l68.cloudfront.net/5ee05ba767df4f91e1c1a9e75c7515f56cd5fa19/1f0fe/img/containers/assets/reviews/michael.png/f24d7ab0a4300c672094d2592427a053.png 387w"
+                                sizes="1px">
+
+                            <img class="rounded-full w-24 border-white bg-blue-300 border-4 mx-auto absolute left-0 right-0 -top-10"
+                                src="https://d33wubrfki0l68.cloudfront.net/7f17508e45105745b38f839387dd6cae84499bd5/ec35d/assets/reviews/michael.png"
+                                alt="michael.png" width="387" height="387" data-statamic-responsive-images>
+                        </picture>
+
+                        <picture>
+
+                            <img class="w-10 mx-auto"
+                                src="https://d33wubrfki0l68.cloudfront.net/ddc7dbebac8dc6b6e66095027e4334c224d352af/4499c/assets/site/quote.svg"
+                                alt="quote.svg" width="32" height="32">
+                        </picture>
+
+                        <p class="mb-8 flex-grow">I hired Michael to build my website for my small landscaping business.
+                            Our business is growing by double digits in large part to the superb website.</p>
+                        <p class="font-bold text-grey-900">Michael Verduyn</p>
+                        <a href="https://gobetterway.ca/" target="_blank"
+                            class="flex justify-center items-center text-grey-600 stroke-grey-300 hover:stroke-grey-900 hover:underline hover:decoration-grey-900 hover:text-grey-900">
+                            <p class="text-sm mr-1.5 text-current">gobetterway.ca</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10"
+                                class="w-3 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.50002 4.5L0.800021 6.205C0.412363 6.59249 0.412363 7.24051 0.800021 7.628L2.37202 9.205C2.75951 9.59266 3.40753 9.59266 3.79502 9.205L5.50002 7.5">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7.5 5.50002L9.205 3.80002C9.591 3.41418 9.59458 2.76648 9.205 2.37702L7.628 0.800021C7.24051 0.412363 6.59249 0.412363 6.205 0.800021L4.5 2.50002">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5L6.5 3.5"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                    <div class="bg-white text-center relative py-12 px-10 pt-16 rounded-xl flex flex-col">
+                        <picture>
+                            <source type="image/webp" media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFGM2tsRVFWUlloY1dYMzQ0ZFJ4R0h2NjdxbnBuelovZXMxM2JpV01ZNGptUEhCa1ZCSUs0Y2NZRWk4UVR3RHZBSVhIUEZEVnlFZDhndFQ0RFlQQUdLSUk1dGdvSUpDTWRLMW1mUG1lbnBQOFhGT2RrSW9maHM0a2lNVkZLUE5GMzFxYXI3VnpYT3pQaC9QdjdyYnJ4eDljcmRKdmdqQjFRenhseisrUENqUnovNnFuN2NWODNBdHk5ZnNvTzlPZnZ6R1pPMndUbklwYkR1SThmTEpjZkxGZjk0L01SOTR3QlhMMSs2ZTdBM1B6clltek9mVHVpYUJxK0NZZVNVR0dKazFROHMxejNMVmM5Skg5LzgxeWRQM3QzbDk4d2x1SGh1Y1hUcHdubm0wNDRtQkZRRWdGb0t5VG1jR1ZoRmdDQ0NjKzRJMkptSk13RzhjZnRWdS9yU0MxdzRXREJwRzBTVVdvMWFLemtuQklOYXNPS2hxWUJSZ2V0WEx0dGZIMzM4VElpZEFOLzd6dTJmWDd2eUVwY3ZuR014bTlHRWdCbWtVa2hqSmlVaE9ZZGlpRlVFUXdEdlBhSHBlTzNWVjk1NS8vN0RuMzF0Z1BtcysvV0w1OC94NHZsREZ2TXBqVytvMVloalpvaVJNVWJTR0JtRHAvZktXZ1d2U3FqZ1cwZENMajFYQmhyVjZkNTB3dUZpajhQRmdxNXBNWU1ZRThNd0VJZUJNVWJpTUxEdUc1WmVVZTJSVktqWjhDcS9mQzRBcjhLa2JkaWJ6VGpZMzJmYVRRQWhqWm40T2NBdzBQZHJUcnppTUVvMXhqcGc0MGhLNlZmQWwrckRUZ0FWb1FtQnJtM28ycGF1bStDYzBJWkNxNTdSZXdaVkZLaDVVNVlUSHhFaU1VWldxOVh6WlVCRjhPb1I4WmdUaW9FWW1EbWMrOEp3RG5NT1JCQVJ3TWpqeVBzUFAzeW1Gc2h1QUVWVndRbTVHTU9ZNkdPa0h3YUdyYTJIZ1hXTXhKekp4VEJBbmFQMXl1MXJWOTU1UGdCVmdvYk4zVGRJS1JOalpCaDYxdXMxeTlXSzVXckZxdThaWWlMWGdnTzhDSlBnYVZWLytsd0F3U3R0RTJoRElJaWdEcWlWbWpQakdCbjZucjd2aVRGU1NnYmJ5SitLUTUxRGRtamhHVzZCcHdtZUxuZzY3Nm1sSXBLeHJmclZuS2c1UVMwYkFSS0hGN2ZWWUdOWHF6bURGQnNZQ0J2SFpvQ0REQWlHczQwcElPSkFIQUxVV3VqSHhEcU85Vm5lZDViZzZjbjZrK1BsQ2VNNFlqbER5VmdwVUFzYkdrTzJBT28yRHF0dER1dG5KeXZ1UGZxblBoZkE3Ly93N3NXUC8vMllrL1dLY1l6a2xLZzVVMnZGcXAxQ2JESmxWS3VNS2ZOMFBmQmt1ZHJsZmpjQXdLZFBuN0x1ZTFKT204QUFweG9nZ01QTUtGWklwVENreFBGNnpWOCtlblluUEROQXpKbVlFcmxXRUlkNnhhdEh2VWRFY2M1UnJKSnkyWHliTS8yWXorTDZiUE9BT1NIaktMQTVaRTVRWDFGVlJCd0c1RklaVW1KSW1WaU5zbnNXQWM2WWdmbmkzSnY0aHJLRjJJd2NZQmpWakZRTGZVNnN4c1FxRlVaemFOdjk1aHNCZU91dG56eGNIRjQ4OHQyTUtwNVVJZFhDV0FwakxzUlNHSEtoVDVWMXJ2UUZSaE15Y3Y4c0FLY2x1UFA2OSsrMjNmUklWWEU0MUhzT0Z2dTgvTXBORGkrK1NET2RReENLRlVyWkJpNlZXSTBSWVhUSzZBS2pxeVJYS2FadkE3L2JDZkREdXo4K0RxSGR2M3I5RnJQWlBqNDBxQWdoZUdiVENlY1A5dGhiN05GTlc0STNwSTVrTTRvVWl2ZFkwK0VtaGhJUVNlQXlMaXZkZk1HTm0zZnN3UWQvZnZaTWVPMzZhL3ZpQTAzVDBiWWRQalI0cndUdjZkcUcrYnhqTXB2UVRnT05HbElDVHBRaWdVWWJKbjVLYWlPcGpReXJBWlVlYjRGNVZTNmFjdVBXNi9iZzNwKytGTUx2SFJ3aTRsRWZ0c0hEWnFielN0c0dtcmJETngwK0JMd0hOWThQTGRvVi9NelFNV09yeVBoMHhZb2xtajIrQmliU0lzMkVwcDN3eGcvdTJtcjUyUy91MzN2dmYwcmlRelBCaWFMaVVRMklla1FWVVQxOWQrS3BUaW1BcXVBYklhZ25JTGhZR1AwS254VzNLa2dvK0NLSTcyaTZPZDFrem5TK3ovR25qOSsrY2V1N3YzMXc3NzN3WHdDaUFlY0VKNXVoQXpiVERXN1RXSENPVWlHbWlsUURMM1JOaTU5TWNlS0prcUN2VkxlaU9nVUorR2F6eitGb3V3bSthWEFpVkRQLzhvMDc5dUdETDg2RmQrSzNJNVZzZ3A0S3lHWmR0LzhBUXl4VVY3RTJvSjNEYThBMFVNUVlLNHpaeUdVald1cWJUUlpGc0JJQVI4bVovWnpJS2ZHdGF6ZnQ3My83d0FHSTJ3WjF6bjNlZWJjOTNFN1hwVlJTem93cEUzTWxGU2dtVkJOS05YSXhjcWxVNHpTYnFsdnpBUTBCSDFxYWRzcDB0cy9lNGh3WFhyaHNBUDhCWVduMGdWbnFMOG9BQUFBQVNVVk9SSzVDWUlJPSIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/c1dab0627c24bc6e1d559a0105f7fdc25e6979f0/1bc9a/img/containers/assets/reviews/david.png/de3e5c873741c3559186a658aba0aa9a.webp 204w, https://d33wubrfki0l68.cloudfront.net/d024499771e3de5eec1795ef39407b03bd5e39a9/1d421/img/containers/assets/reviews/david.png/5e2b40d82e1745445474b68583708c04.webp 244w, https://d33wubrfki0l68.cloudfront.net/4d5fab8ddaab75b7bc0561f68f6f735e57a427a7/ad457/img/containers/assets/reviews/david.png/0c2bd2a00a8b6ea3bb9c52ee83c48647.webp 292w, https://d33wubrfki0l68.cloudfront.net/e1f9e7e8ac4c447fd523c2f0c2d9a068421c660c/8883b/img/containers/assets/reviews/david.png/92e39dc24283204b60a93c62ba6f0c9f.webp 349w, https://d33wubrfki0l68.cloudfront.net/865dd44516ddce069fa0048350ddd4660424e23a/02b9e/img/containers/assets/reviews/david.png/2285909e5d7235bc0e9f918f01922fda.webp 418w, https://d33wubrfki0l68.cloudfront.net/9bd31e1d374df976b5e8d2434301430fbb92996d/1820e/img/containers/assets/reviews/david.png/6ccb66d63f6483d6b0379748c05468fa.webp 500w"
+                                sizes="1px">
+
+                            <source media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFGM2tsRVFWUlloY1dYMzQ0ZFJ4R0h2NjdxbnBuelovZXMxM2JpV01ZNGptUEhCa1ZCSUs0Y2NZRWk4UVR3RHZBSVhIUEZEVnlFZDhndFQ0RFlQQUdLSUk1dGdvSUpDTWRLMW1mUG1lbnBQOFhGT2RrSW9maHM0a2lNVkZLUE5GMzFxYXI3VnpYT3pQaC9QdjdyYnJ4eDljcmRKdmdqQjFRenhseisrUENqUnovNnFuN2NWODNBdHk5ZnNvTzlPZnZ6R1pPMndUbklwYkR1SThmTEpjZkxGZjk0L01SOTR3QlhMMSs2ZTdBM1B6clltek9mVHVpYUJxK0NZZVNVR0dKazFROHMxejNMVmM5Skg5LzgxeWRQM3QzbDk4d2x1SGh1Y1hUcHdubm0wNDRtQkZRRWdGb0t5VG1jR1ZoRmdDQ0NjKzRJMkptSk13RzhjZnRWdS9yU0MxdzRXREJwRzBTVVdvMWFLemtuQklOYXNPS2hxWUJSZ2V0WEx0dGZIMzM4VElpZEFOLzd6dTJmWDd2eUVwY3ZuR014bTlHRWdCbWtVa2hqSmlVaE9ZZGlpRlVFUXdEdlBhSHBlTzNWVjk1NS8vN0RuMzF0Z1BtcysvV0w1OC94NHZsREZ2TXBqVytvMVloalpvaVJNVWJTR0JtRHAvZktXZ1d2U3FqZ1cwZENMajFYQmhyVjZkNTB3dUZpajhQRmdxNXBNWU1ZRThNd0VJZUJNVWJpTUxEdUc1WmVVZTJSVktqWjhDcS9mQzRBcjhLa2JkaWJ6VGpZMzJmYVRRQWhqWm40T2NBdzBQZHJUcnppTUVvMXhqcGc0MGhLNlZmQWwrckRUZ0FWb1FtQnJtM28ycGF1bStDYzBJWkNxNTdSZXdaVkZLaDVVNVlUSHhFaU1VWldxOVh6WlVCRjhPb1I4WmdUaW9FWW1EbWMrOEp3RG5NT1JCQVJ3TWpqeVBzUFAzeW1Gc2h1QUVWVndRbTVHTU9ZNkdPa0h3YUdyYTJIZ1hXTXhKekp4VEJBbmFQMXl1MXJWOTU1UGdCVmdvYk4zVGRJS1JOalpCaDYxdXMxeTlXSzVXckZxdThaWWlMWGdnTzhDSlBnYVZWLytsd0F3U3R0RTJoRElJaWdEcWlWbWpQakdCbjZucjd2aVRGU1NnYmJ5SitLUTUxRGRtamhHVzZCcHdtZUxuZzY3Nm1sSXBLeHJmclZuS2c1UVMwYkFSS0hGN2ZWWUdOWHF6bURGQnNZQ0J2SFpvQ0REQWlHczQwcElPSkFIQUxVV3VqSHhEcU85Vm5lZDViZzZjbjZrK1BsQ2VNNFlqbER5VmdwVUFzYkdrTzJBT28yRHF0dER1dG5KeXZ1UGZxblBoZkE3Ly93N3NXUC8vMllrL1dLY1l6a2xLZzVVMnZGcXAxQ2JESmxWS3VNS2ZOMFBmQmt1ZHJsZmpjQXdLZFBuN0x1ZTFKT204QUFweG9nZ01QTUtGWklwVENreFBGNnpWOCtlblluUEROQXpKbVlFcmxXRUlkNnhhdEh2VWRFY2M1UnJKSnkyWHliTS8yWXorTDZiUE9BT1NIaktMQTVaRTVRWDFGVlJCd0c1RklaVW1KSW1WaU5zbnNXQWM2WWdmbmkzSnY0aHJLRjJJd2NZQmpWakZRTGZVNnN4c1FxRlVaemFOdjk1aHNCZU91dG56eGNIRjQ4OHQyTUtwNVVJZFhDV0FwakxzUlNHSEtoVDVWMXJ2UUZSaE15Y3Y4c0FLY2x1UFA2OSsrMjNmUklWWEU0MUhzT0Z2dTgvTXBORGkrK1NET2RReENLRlVyWkJpNlZXSTBSWVhUSzZBS2pxeVJYS2FadkE3L2JDZkREdXo4K0RxSGR2M3I5RnJQWlBqNDBxQWdoZUdiVENlY1A5dGhiN05GTlc0STNwSTVrTTRvVWl2ZFkwK0VtaGhJUVNlQXlMaXZkZk1HTm0zZnN3UWQvZnZaTWVPMzZhL3ZpQTAzVDBiWWRQalI0cndUdjZkcUcrYnhqTXB2UVRnT05HbElDVHBRaWdVWWJKbjVLYWlPcGpReXJBWlVlYjRGNVZTNmFjdVBXNi9iZzNwKytGTUx2SFJ3aTRsRWZ0c0hEWnFielN0c0dtcmJETngwK0JMd0hOWThQTGRvVi9NelFNV09yeVBoMHhZb2xtajIrQmliU0lzMkVwcDN3eGcvdTJtcjUyUy91MzN2dmYwcmlRelBCaWFMaVVRMklla1FWVVQxOWQrS3BUaW1BcXVBYklhZ25JTGhZR1AwS254VzNLa2dvK0NLSTcyaTZPZDFrem5TK3ovR25qOSsrY2V1N3YzMXc3NzN3WHdDaUFlY0VKNXVoQXpiVERXN1RXSENPVWlHbWlsUURMM1JOaTU5TWNlS0prcUN2VkxlaU9nVUorR2F6eitGb3V3bSthWEFpVkRQLzhvMDc5dUdETDg2RmQrSzNJNVZzZ3A0S3lHWmR0LzhBUXl4VVY3RTJvSjNEYThBMFVNUVlLNHpaeUdVald1cWJUUlpGc0JJQVI4bVovWnpJS2ZHdGF6ZnQ3My83d0FHSTJ3WjF6bjNlZWJjOTNFN1hwVlJTem93cEUzTWxGU2dtVkJOS05YSXhjcWxVNHpTYnFsdnpBUTBCSDFxYWRzcDB0cy9lNGh3WFhyaHNBUDhCWVduMGdWbnFMOG9BQUFBQVNVVk9SSzVDWUlJPSIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/3de59632638f05e4df611cf0a8edb1f65fd5e181/90a4e/img/containers/assets/reviews/david.png/b514d9772cc18a74dd30d5b30891b7fc.png 204w, https://d33wubrfki0l68.cloudfront.net/9b0ec034e7b922133e00580bfe728df9bd16c5b2/f6aaa/img/containers/assets/reviews/david.png/69824fcbe06fecb3e83cb9e75e04d3f0.png 244w, https://d33wubrfki0l68.cloudfront.net/eeddfba3e068d15c7fe3057b83cbf449c17f2d6c/77f45/img/containers/assets/reviews/david.png/e23581fccb3321db248208f9b95f7908.png 292w, https://d33wubrfki0l68.cloudfront.net/e5be15a7097c74e67ce7464140bed140a26c4a9c/4bbf4/img/containers/assets/reviews/david.png/d020c12492e80d11e7945450027d4295.png 349w, https://d33wubrfki0l68.cloudfront.net/b8ebc5a0b46c4c4b836aa1b18174469db34889b9/4c4b6/img/containers/assets/reviews/david.png/b15901123bfceec7036ce8097a9d2d8c.png 418w, https://d33wubrfki0l68.cloudfront.net/786a4223b318b7397601394218de06effcb446c6/33cb7/img/containers/assets/reviews/david.png/ca0256759d77cdfb22dda2820dc993f9.png 500w"
+                                sizes="1px">
+
+                            <img class="rounded-full w-24 border-white bg-purple-300 border-4 mx-auto absolute left-0 right-0 -top-10"
+                                src="https://d33wubrfki0l68.cloudfront.net/8610df6bfd149b979bf90062c45bae110b903f05/692e2/assets/reviews/david.png"
+                                alt="david.png" width="500" height="500" data-statamic-responsive-images>
+                        </picture>
+
+                        <picture>
+
+                            <img class="w-10 mx-auto"
+                                src="https://d33wubrfki0l68.cloudfront.net/ddc7dbebac8dc6b6e66095027e4334c224d352af/4499c/assets/site/quote.svg"
+                                alt="quote.svg" width="32" height="32">
+                        </picture>
+
+                        <p class="mb-8 flex-grow">Creative, professional, and reliable. A keen eye for design, both in
+                            form and function. Very highly recommended!</p>
+                        <p class="font-bold text-grey-900">David Robinson</p>
+                        <a href="https://www.westminsterchapel.ca" target="_blank"
+                            class="flex justify-center items-center text-grey-600 stroke-grey-300 hover:stroke-grey-900 hover:underline hover:decoration-grey-900 hover:text-grey-900">
+                            <p class="text-sm mr-1.5 text-current">westminsterchapel.ca</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10"
+                                class="w-3 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.50002 4.5L0.800021 6.205C0.412363 6.59249 0.412363 7.24051 0.800021 7.628L2.37202 9.205C2.75951 9.59266 3.40753 9.59266 3.79502 9.205L5.50002 7.5">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7.5 5.50002L9.205 3.80002C9.591 3.41418 9.59458 2.76648 9.205 2.37702L7.628 0.800021C7.24051 0.412363 6.59249 0.412363 6.205 0.800021L4.5 2.50002">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5L6.5 3.5"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                    <div class="bg-white text-center relative py-12 px-10 pt-16 rounded-xl flex flex-col">
+                        <picture>
+                            <source type="image/webp" media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFHVzBsRVFWUlloY1dYelk5ZlpSWEhQK2M1ejNQdmI2YlQwbmFHS2FWQWE5SElpd2tWaVN2VUZhWW1vSkVZWWtUMmhzU1ZmNHV1VEZ5d3drQWFFaGZHYUtLQ2tVVU54SmZJUXQ2cUZwQU9URHZ6Ky8zdWZWN09jWEVIRmtxbnRaandKSGR6azN2TzU1ejdQUytQdUR1ZjVBbWZxSGNnZnB5UHYzWDJxdzhlT1hqdytaUVN6UnBiMjVjWHovejhGd2YrRnh0eUk3L2c4VWUrOXZSdG01dVBuVHgrbk0zMW84ejZudHFNUzl2YnZQYjNmL0xYMTE3bjNDOS9KZjkzZ01lLy9zaURKMi9aZlA3T1c0OXpZdU1vUnc2dXNiYTZTa29kRGl6R3pOYVZLN3o2ajR1OCtNYy84Wk56ejEwVDRyb0J2dmZFZDE4OTg1bFBuejYxZVRNYnF6MXJYV0lsUmJxVWlERkJDRlNIWmExYzJ0bmhsVGN1OE5zL3ZNU1BuejIzTDhSMWFlQTdqMzd6NlFlL2NQL3B1MCtkWW1PbFo4VXJ5U3NKSTFsRExTQkI2RlRwWTA4WEl4b0NwVldlK01iRHYzbnF1Wjk5NVdNQnJLMnNQclo1ZEoxREIxYnBCQ1NQZU1rWTROSEFwM0tTS0lRWU9kQW5ObTQ2eEtuang5azRjdVRMSHpzREdnSkJoRlliMlFwMVdLSWxUekNkSVlDSUVDUWdJUkJEWkNVbERoODh5TEgxOVgxdFgxY2ZXSm4xdEZxWXozZTVzclBEbGQxZGRoZHo1c09TNVRBd2pDTjVIQ2s1MDByQldrTWxzTGE2eWgwblR2RHRSeDYrcXRDdW1ZRnZuRDM3NUFQMzNFMGVCaTYzaXBZUkxTTTl4aXhHY2pWbTFlaHJJN1ZHTWtNQnVwNis2N2g1ZlozTm16ZXVhdithQURldHJQeGdwb0ZoWjRmbWpWQUx5WTFlQTJOS0xFdWo3d3A5enZTNTBKZEtaMFpFYUJwUlZWSk1OdzRROG5pNnplY3M4a2l3TmptUENpbmg1dVJtREtYUzVjcXNOR2JObVJGSUtGbVZ4VERRek95R0FCNDZjOStUZDk5K0c3NjdROVpBeElrcEVzSU1GUUVFTTZkaWlCaEJEYTBOTFpVMkR1eFU0NjIzMzJGcisvTDNid2lnRS9uaGlnaVNSd2hDaUVwS2tWNER2VWFpS3I2bi9LUktGeU5KSXlxQ2xjWmlaNGNMYjc3SlU4ODg4Nk1iQWhBUkV5Y0VjMklRa2dncENKMEV1aUJvQ0RpQ3lOU0Vaakd5MmtXU0t0bU1PcDl6ZVd0clB4ZjdBN1NndXdVT3VRUTA2TlFQRUhESFdnTUVSQWdvNGtZVTZFSWdCcUhtU2gwRzhuTFlGK0NxZmVET0U3ZTdpeDRhbTFIZE1abWNHVTVwbFZ3TFl4NFo4MGpPbVZZTGJnM2NvRlhHY2VDOTdXM2UzZDYrTnNESms2ZjlzM2ZkKzlJSEwwOGN1OVVQcks3aENNdFNXZFpLYm8xcVJqV2pXSnNBeXZTVVdtbk5hR1kwYTVSYTJSbVdYTmk2eExPL2YzSC9ZWFR2UGZmNUxjZU9FMU02Yy8vbnYrakRjc0hodzBmcG90TE1XSTZaUmFmTUFzUUFxZ0UxaGRZUWNVUUNFZkE5TjJaRzlzcmx4Wngzcmx6Wk4zcUF1SDUwblpRU3FwRStkWXhkVHg1SHBGVnFNNFpjbUEvS1RJV2tRb3FCYUpFUWxDQVFQdFNISWlIUWNPWjU1SzN0YlM1dXZYZHRnSlYrUnBCSkNzWTBVSUlJanRETUdXcGxrVE1yVWVoVVNGRkp5WWdSVkpRWUl5a2x1cFJRVlVvejNwOHZlUDJkZjNIdWQvdW5IeUQycVFPSGFoWE1jWnZHSzBCekdHdGxQanA5Y0ZLQUdKVzR0NFNrS01RWTZidEVTdE5Tc3F5RmkrOXY4N2VMYjE4emVvQTQ2MmFZRzFLZ2hvb3dRVHVDdVZHYXM4aEdFa2NGUWdoVCtrTWt4VzRxUTFVSWdXTE96cEI1ZTN1WG4vNzZoZXZhQ1dQZmRUUXpjS2RvUVRVZ0lvaE1FTldOc1JxN2JzamUrbVlBRWxDTmRIM1ByRFlvaFZvcTc4OEhpaXVQUG5UV0w3eDc2VXZuWHo3L3dyNEFHaFFRb2thaXhnOGJEaDdBSGN5cFppenJWT1B1Um5NSEVVUVZUUWtMQWMyWm9UcmJ5NUhtZ1dQcm14RDc1eDg0ODBBOS8vTDVxNDdENk82VEkvWVVyVXBReFhIRUhaR3A4OVZtTEszaE9DNkNhQ1RFRGpReXI1VkdZSkVyaTJLTUptaFFEcThkWXR3bzhkNjdQdmZxWDE3NTg1MGZDZEJhdy9jaWc4bWhCb1VwU0lJYmlPQTR6U3BqYzBKdHhGS0k0MGliSzJFNU10VEdjcXdVQjQwOXNac2hJcXgwUFFkV1ZrOWZOUU90VmN5ZDFnemJ5NFFFUVZHQ0NDcEFVRHdJclJiTUd3VmxXUjNObGV4THFqbkxNVE9XaGdSbDFodWRnWWVBTmFQdmVrN2Q4U2wvNDhMci95WE0yTXd3TTFxcm1EWGNwKzRtd2RHZ3hDQklqQkFqclJWc0QzZzB3WVpLR0J1NVZzYWNhZVowcVVOQ3dvTmlJcFRXVUZYNnJ0OG5BMmJVVm1tdFllN1RsaHNtUGFncUdnVGNpQzFSYTZYV1NyYkdPRmFzVFhPaDFvSktJSVJJTllOYWFRakZHdTVNbDVlUE9NSDJCa2hyN2NOeS9FQ1FJUVNDVGlBeEpXTFhvYWxETk5KY0dJdXhHQXZMSVpOTG81bmpUQ2FhKzJUWERCQzZic1p0Sis1WS9pZkF2d0YrMFhjcm5IZkVqUUFBQUFCSlJVNUVya0pnZ2c9PSIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/0e72a2f69559b08ddee7ba6f68ec12b2c2a7f20a/3e5e4/img/containers/assets/reviews/darren.png/e8d6baf5030ee48f855a4569b959b221.webp 85w, https://d33wubrfki0l68.cloudfront.net/ad97d119ba116cf2f0b0d7ae6daff286ce3ce837/dabca/img/containers/assets/reviews/darren.png/7438ef6cafe46a2b35eb463718cbcd7f.webp 102w, https://d33wubrfki0l68.cloudfront.net/3b5cb8ca54506722539f59f58984487cc3c53de4/b81ae/img/containers/assets/reviews/darren.png/4d0ea76db27bccf53889643092f07ad4.webp 122w, https://d33wubrfki0l68.cloudfront.net/e781ac2f085d9f4cf1b707f2547e7b56072c8d32/a64a6/img/containers/assets/reviews/darren.png/5419b12e2948ce217555f83a29ab9231.webp 146w, https://d33wubrfki0l68.cloudfront.net/216fa5045ff671ad55b19b619179b93215e89cfe/137ad/img/containers/assets/reviews/darren.png/1eb1372c74eb4913e0c159bf42d0fa5f.webp 175w, https://d33wubrfki0l68.cloudfront.net/ee2e93ff417131f07aedd08cf8704cb02b98eb42/0bf64/img/containers/assets/reviews/darren.png/abd95e109fdb3a3183dd77e8d2444a46.webp 209w, https://d33wubrfki0l68.cloudfront.net/3cf1910edbb3734493729de6ff0889467e3d9626/05086/img/containers/assets/reviews/darren.png/e2b59e6e256184cbee1467cf566a870c.webp 250w"
+                                sizes="1px">
+
+                            <source media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFHVzBsRVFWUlloY1dYelk5ZlpSWEhQK2M1ejNQdmI2YlQwbmFHS2FWQWE5SElpd2tWaVN2VUZhWW1vSkVZWWtUMmhzU1ZmNHV1VEZ5d3drQWFFaGZHYUtLQ2tVVU54SmZJUXQ2cUZwQU9URHZ6Ky8zdWZWN09jWEVIRmtxbnRaandKSGR6azN2TzU1ejdQUytQdUR1ZjVBbWZxSGNnZnB5UHYzWDJxdzhlT1hqdytaUVN6UnBiMjVjWHovejhGd2YrRnh0eUk3L2c4VWUrOXZSdG01dVBuVHgrbk0zMW84ejZudHFNUzl2YnZQYjNmL0xYMTE3bjNDOS9KZjkzZ01lLy9zaURKMi9aZlA3T1c0OXpZdU1vUnc2dXNiYTZTa29kRGl6R3pOYVZLN3o2ajR1OCtNYy84Wk56ejEwVDRyb0J2dmZFZDE4OTg1bFBuejYxZVRNYnF6MXJYV0lsUmJxVWlERkJDRlNIWmExYzJ0bmhsVGN1OE5zL3ZNU1BuejIzTDhSMWFlQTdqMzd6NlFlL2NQL3B1MCtkWW1PbFo4VXJ5U3NKSTFsRExTQkI2RlRwWTA4WEl4b0NwVldlK01iRHYzbnF1Wjk5NVdNQnJLMnNQclo1ZEoxREIxYnBCQ1NQZU1rWTROSEFwM0tTS0lRWU9kQW5ObTQ2eEtuang5azRjdVRMSHpzREdnSkJoRlliMlFwMVdLSWxUekNkSVlDSUVDUWdJUkJEWkNVbERoODh5TEgxOVgxdFgxY2ZXSm4xdEZxWXozZTVzclBEbGQxZGRoZHo1c09TNVRBd2pDTjVIQ2s1MDByQldrTWxzTGE2eWgwblR2RHRSeDYrcXRDdW1ZRnZuRDM3NUFQMzNFMGVCaTYzaXBZUkxTTTl4aXhHY2pWbTFlaHJJN1ZHTWtNQnVwNis2N2g1ZlozTm16ZXVhdithQURldHJQeGdwb0ZoWjRmbWpWQUx5WTFlQTJOS0xFdWo3d3A5enZTNTBKZEtaMFpFYUJwUlZWSk1OdzRROG5pNnplY3M4a2l3TmptUENpbmg1dVJtREtYUzVjcXNOR2JObVJGSUtGbVZ4VERRek95R0FCNDZjOStUZDk5K0c3NjdROVpBeElrcEVzSU1GUUVFTTZkaWlCaEJEYTBOTFpVMkR1eFU0NjIzMzJGcisvTDNid2lnRS9uaGlnaVNSd2hDaUVwS2tWNER2VWFpS3I2bi9LUktGeU5KSXlxQ2xjWmlaNGNMYjc3SlU4ODg4Nk1iQWhBUkV5Y0VjMklRa2dncENKMEV1aUJvQ0RpQ3lOU0Vaakd5MmtXU0t0bU1PcDl6ZVd0clB4ZjdBN1NndXdVT3VRUTA2TlFQRUhESFdnTUVSQWdvNGtZVTZFSWdCcUhtU2gwRzhuTFlGK0NxZmVET0U3ZTdpeDRhbTFIZE1abWNHVTVwbFZ3TFl4NFo4MGpPbVZZTGJnM2NvRlhHY2VDOTdXM2UzZDYrTnNESms2ZjlzM2ZkKzlJSEwwOGN1OVVQcks3aENNdFNXZFpLYm8xcVJqV2pXSnNBeXZTVVdtbk5hR1kwYTVSYTJSbVdYTmk2eExPL2YzSC9ZWFR2UGZmNUxjZU9FMU02Yy8vbnYrakRjc0hodzBmcG90TE1XSTZaUmFmTUFzUUFxZ0UxaGRZUWNVUUNFZkE5TjJaRzlzcmx4Wngzcmx6Wk4zcUF1SDUwblpRU3FwRStkWXhkVHg1SHBGVnFNNFpjbUEvS1RJV2tRb3FCYUpFUWxDQVFQdFNISWlIUWNPWjU1SzN0YlM1dXZYZHRnSlYrUnBCSkNzWTBVSUlJanRETUdXcGxrVE1yVWVoVVNGRkp5WWdSVkpRWUl5a2x1cFJRVlVvejNwOHZlUDJkZjNIdWQvdW5IeUQycVFPSGFoWE1jWnZHSzBCekdHdGxQanA5Y0ZLQUdKVzR0NFNrS01RWTZidEVTdE5Tc3F5RmkrOXY4N2VMYjE4emVvQTQ2MmFZRzFLZ2hvb3dRVHVDdVZHYXM4aEdFa2NGUWdoVCtrTWt4VzRxUTFVSWdXTE96cEI1ZTN1WG4vNzZoZXZhQ1dQZmRUUXpjS2RvUVRVZ0lvaE1FTldOc1JxN2JzamUrbVlBRWxDTmRIM1ByRFlvaFZvcTc4OEhpaXVQUG5UV0w3eDc2VXZuWHo3L3dyNEFHaFFRb2thaXhnOGJEaDdBSGN5cFppenJWT1B1Um5NSEVVUVZUUWtMQWMyWm9UcmJ5NUhtZ1dQcm14RDc1eDg0ODBBOS8vTDVxNDdENk82VEkvWVVyVXBReFhIRUhaR3A4OVZtTEszaE9DNkNhQ1RFRGpReXI1VkdZSkVyaTJLTUptaFFEcThkWXR3bzhkNjdQdmZxWDE3NTg1MGZDZEJhdy9jaWc4bWhCb1VwU0lJYmlPQTR6U3BqYzBKdHhGS0k0MGliSzJFNU10VEdjcXdVQjQwOXNac2hJcXgwUFFkV1ZrOWZOUU90VmN5ZDFnemJ5NFFFUVZHQ0NDcEFVRHdJclJiTUd3VmxXUjNObGV4THFqbkxNVE9XaGdSbDFodWRnWWVBTmFQdmVrN2Q4U2wvNDhMci95WE0yTXd3TTFxcm1EWGNwKzRtd2RHZ3hDQklqQkFqclJWc0QzZzB3WVpLR0J1NVZzYWNhZVowcVVOQ3dvTmlJcFRXVUZYNnJ0OG5BMmJVVm1tdFllN1RsaHNtUGFncUdnVGNpQzFSYTZYV1NyYkdPRmFzVFhPaDFvSktJSVJJTllOYWFRakZHdTVNbDVlUE9NSDJCa2hyN2NOeS9FQ1FJUVNDVGlBeEpXTFhvYWxETk5KY0dJdXhHQXZMSVpOTG81bmpUQ2FhKzJUWERCQzZic1p0Sis1WS9pZkF2d0YrMFhjcm5IZkVqUUFBQUFCSlJVNUVya0pnZ2c9PSIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/661319567598efda072a5143c3305a1e93c5f169/d86a2/img/containers/assets/reviews/darren.png/95361e210e8b2b86fe2ac033cb656ea0.png 85w, https://d33wubrfki0l68.cloudfront.net/b67a6f98ea89eba12aea829cb976a885958468c9/c9240/img/containers/assets/reviews/darren.png/eaeab0b9141006a172c9d787c995a1fb.png 102w, https://d33wubrfki0l68.cloudfront.net/85d55686834c09efa7f26223c426b680b7bc7026/7773f/img/containers/assets/reviews/darren.png/24045fcfd06f8c90540a523f77f883e6.png 122w, https://d33wubrfki0l68.cloudfront.net/29f28590edc94fc5bf533d4c7bca0711a876f65c/b62dc/img/containers/assets/reviews/darren.png/43d0489606e9ee240ce10a79ac943d15.png 146w, https://d33wubrfki0l68.cloudfront.net/1cddce58677c768dfbb34fa6faea1a86ee87a8a1/71ac5/img/containers/assets/reviews/darren.png/ef4be351dd239c08388e13959f302485.png 175w, https://d33wubrfki0l68.cloudfront.net/bcc09ca5620915ee01cd9a3a7e5c8dfece990533/ec052/img/containers/assets/reviews/darren.png/861dffcf7b4684a9a21c1657b3969552.png 209w, https://d33wubrfki0l68.cloudfront.net/eca05c2cddb61dac2b6d95a14385ab5ae3031f3e/c225c/img/containers/assets/reviews/darren.png/383fa622a0451e9826a5af18dbcdb78c.png 250w"
+                                sizes="1px">
+
+                            <img class="rounded-full w-24 border-white bg-yellow-300 border-4 mx-auto absolute left-0 right-0 -top-10"
+                                src="https://d33wubrfki0l68.cloudfront.net/9e3606e69865209a668830b71ccadce066010743/d2002/assets/reviews/darren.png"
+                                alt="darren.png" width="250" height="250" data-statamic-responsive-images>
+                        </picture>
+
+                        <picture>
+
+                            <img class="w-10 h-full mx-auto"
+                                src="https://d33wubrfki0l68.cloudfront.net/ddc7dbebac8dc6b6e66095027e4334c224d352af/4499c/assets/site/quote.svg"
+                                alt="quote.svg" width="32" height="32">
+                        </picture>
+
+                        <p class="mb-8 flex-grow">Michael was an absolute pleasure to work with. He listened to my
+                            website requirements, and designed a perfect site for us!</p>
+                        <p class="font-bold text-grey-900">Darren Nickerson</p>
+                        <a href="https://canada1carsales.ca/" target="_blank"
+                            class="flex justify-center items-center text-grey-600 stroke-grey-300 hover:stroke-grey-900 hover:underline hover:decoration-grey-900 hover:text-grey-900">
+                            <p class="text-sm mr-1.5 text-current">canada1carsales.ca</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10"
+                                class="w-3 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.50002 4.5L0.800021 6.205C0.412363 6.59249 0.412363 7.24051 0.800021 7.628L2.37202 9.205C2.75951 9.59266 3.40753 9.59266 3.79502 9.205L5.50002 7.5">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7.5 5.50002L9.205 3.80002C9.591 3.41418 9.59458 2.76648 9.205 2.37702L7.628 0.800021C7.24051 0.412363 6.59249 0.412363 6.205 0.800021L4.5 2.50002">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5L6.5 3.5"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+                <a href="https://www.trustpilot.com/review/michaelmannucci.com" target="_blank"
+                    class="flex flex-col gap-2 items-center justify-center" data-aos="fade-up">
+                    <p class="text-2xl font-bold text-[black]">Five stars</p>
+                    <picture>
+
+                        <img class="h-7"
+                            src="https://d33wubrfki0l68.cloudfront.net/3acf4c5ca7d485b8d2c947cb79a3fdb392182d04/6be90/assets/site/tp-stars.svg"
+                            alt="tp-stars.svg" width="2500" height="469">
+                    </picture>
+
+                    <p class="text-sm text-[black]">Based on <span class="underline">8 reviews</span></p>
+                    <picture>
+
+                        <img class="h-6"
+                            src="https://d33wubrfki0l68.cloudfront.net/4847ebbde0fc6169fb03bd81887bc0d7021c1587/a14d3/assets/site/trustpilot.svg"
+                            alt="trustpilot.svg" width="126" height="31">
+                    </picture>
+
+                </a>
+            </div>
+        </div> -->
+
+        <!-- blogs -->
+        <div class="pt-16 pb-32 container">
+            <div data-aos="fade-up">
+                <h3 class="font-bold uppercase tracking-widest text-grey-600 text-center">Latest</h3>
+                <h2 class="title text-center mb-16">From the Blog</h2>
+            </div>
+            <div data-aos="fade-up">
+                <div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                    <a href="blog/3-tips-for-picking-the-right-web-designer"
+                        class="rounded-3xl overflow-hidden shadow-lg shadow-grey-500/40 hover:-translate-y-1 transition-transform duration-300">
+                        <picture>
+                            <source type="image/webp" media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDE3Ij4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMTciIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBUkNBWUFBQUM4WEs3OEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFESjBsRVFWUklpWDJWMjI3Y1NBeEVEOWtYYVd3anlXYi8vei8yS1VEK2FEZDJScGZ1WnUzREtQWk03QWtGUVEyb1cxV3NJaW43OXYwZmNZU2tkODhRZE1FdXNVdDBCUjZpeEtCRVVQb2dqMGFOUm9sT1JwQ2NxQk85VEl3eUVaN0JEY3d2UUdZSG9wRzVFOUtGd0JpaWhWZ2xGb21tSUNtWUlxQjNySGR5My9IWUtOSElCTXFaNFVMSmtUTENFZWtqbFBzRWtJZ2hXaDhzZmZCakJNOFNPNklTUEkyQjlZNjNEZldWRkN1Wm5ZeFFGSEFST1dNcTJFV1hhMXc0Uk1odmVMclpJSWtSUVd1ZDg5NzRydzMrbFdpSUUwR0tRVzA3dFc5RUxHQXJXRWR1aENEVWtRWW9Ec1FEd3d3UUpyc2w4SzRPZ0FqUnhtRFpPeS9iem5NUHVnSlQwS0xUeDA2UGxlNGJyWFk4Z2FWTXBFSllSbVlFaGw0cHZJLzgwUnNkVjNENDN3Zm5yWEhlZHFJMXBoaTA2QXcxaHUrMGFiQlVwK1VKNVJsOHd0T0VXOFZJQ0wvcjlCK0xjQnlTYnpIWTlzWjJYbURkYUtQVENVWUtvb2hlbklVS2ZrTHBoUHRFOVVxeGdsdDZNL3htOVJFQlhTOENHRWlkaUU3MEhkWVZMU3VTVU0xNHFuaE5LQ2QyTDNSbXhFd2hnMldNUk1ZeDdCM3dIeFFRU0pnQzF5QkZKMGVuUm1lS2dSQTVKOHJEQStYcGtUcFhQQnQ3Tm5ZU2ttTnlpaTRwdkJhODdIMzZIeEg0dGNjUm1hQmFjSEx4bUl6SVRpZ3pUelA1MDJmeVg1L0o4M1Q0ZFZTOTNYYlQ2MjBmR1FENXB2MFE2TExOTWJJNVU4bzgxVXFiQSs5aWF3T3ZFK00wczgwbjl0T0pKRUZ2cEdpNE90bUM1RTZ5KzlMcllIV25DQTB6eDFOaHFzNGpoVUVCTDlpeXNabnhNZ1pzRzhPZGg1SXBPVlBOeVdTS0JRWGg3cGo3MitSRkZ5dXVhUHltd0pVUm5qQ01iSmxUcW9SZmVudkhPQzhyenk4dnZLd0x5K25FMzQrUGZIbDY0R211MUpRdkNpZ08xZTNJOVFLdWE0c3dNaEYzUkxvY1RzbXBEc0xvSXpodkt6dzN6aitlYWIzVHBvbnk5UXRQL2hVdm42aWxraXhkTXRWUkFOS3ZXWGhWSXBlSm1LUDNleTY4a25CQklaaE56SWpTRzV4L3N2MDhrMnBoOGFDZENzd1pTMER5TitEZkZOYk54eUhySG9GYm9uakVhenZXNkpTMjQvdDJtUlByekZqT2pIVm1KTWR5T2tTL040RGZJc2NZM0ovVVZ4R0JqMEZXVUJUa28wMDlETVpBdlJHdEVXMG5sSy8rK1I5bDlCYi9BL0lWR0FZS3htME5BQUFBQUVsRlRrU3VRbUNDIiAvPgo8L3N2Zz4K 32w, https://d33wubrfki0l68.cloudfront.net/eb6724593894a37534470712337623bfe4a5e570/bafe2/img/containers/assets/blog/business-owner-web-design-options.png/7c29f0b781e831051af71445786c0e31.webp 241w, https://d33wubrfki0l68.cloudfront.net/388e6462e3e1a7df376f51a5efd281b2b149a44a/d179d/img/containers/assets/blog/business-owner-web-design-options.png/4c5709e4b06e7ab500618a4daea59b1c.webp 288w, https://d33wubrfki0l68.cloudfront.net/9e1a346146593cd23be56ccfed0eed26e873232c/2894a/img/containers/assets/blog/business-owner-web-design-options.png/d367964f0f424fba30528378788a038f.webp 344w, https://d33wubrfki0l68.cloudfront.net/99c0d50e3aa7051a1e4f504d19f5e648444455ca/a7c28/img/containers/assets/blog/business-owner-web-design-options.png/84f1a9c841159eacb3983c53cd031876.webp 411w, https://d33wubrfki0l68.cloudfront.net/2f59a58ccceb37987893aff713816e84922214cb/8949b/img/containers/assets/blog/business-owner-web-design-options.png/c82474fd3e9c6d20c45fa0b5c7c4c60a.webp 491w, https://d33wubrfki0l68.cloudfront.net/85dd3c7119042261c9a62cd223ad353d38a2d663/a99ba/img/containers/assets/blog/business-owner-web-design-options.png/f175ff8f60f639d90dc7174a65c9659f.webp 587w, https://d33wubrfki0l68.cloudfront.net/1353785c1446b33ce70d120c15d2a7d7543a7272/634a8/img/containers/assets/blog/business-owner-web-design-options.png/659ae7011d99839000f38999c7eff72d.webp 702w, https://d33wubrfki0l68.cloudfront.net/71a60bc86a32439f771927fcebb65654b28fed7a/52364/img/containers/assets/blog/business-owner-web-design-options.png/76de81e525750435792712b1e597a03c.webp 839w, https://d33wubrfki0l68.cloudfront.net/9d4982c29c1699301fd9dfaac806c11a3c0b66d4/72b8b/img/containers/assets/blog/business-owner-web-design-options.png/6fcedfdf701a509d80a6cc01e20dce89.webp 1003w, https://d33wubrfki0l68.cloudfront.net/0db9e9241ccd717fd05a3d6153e2ccb906334bcc/5bd5c/img/containers/assets/blog/business-owner-web-design-options.png/7a9e3fb34ab1666487bf5badc2d4574e.webp 1200w"
+                                sizes="1px">
+
+                            <source media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDE3Ij4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMTciIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBUkNBWUFBQUM4WEs3OEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFESjBsRVFWUklpWDJWMjI3Y1NBeEVEOWtYYVd3anlXYi8vei8yS1VEK2FEZDJScGZ1WnUzREtQWk03QWtGUVEyb1cxV3NJaW43OXYwZmNZU2tkODhRZE1FdXNVdDBCUjZpeEtCRVVQb2dqMGFOUm9sT1JwQ2NxQk85VEl3eUVaN0JEY3d2UUdZSG9wRzVFOUtGd0JpaWhWZ2xGb21tSUNtWUlxQjNySGR5My9IWUtOSElCTXFaNFVMSmtUTENFZWtqbFBzRWtJZ2hXaDhzZmZCakJNOFNPNklTUEkyQjlZNjNEZldWRkN1Wm5ZeFFGSEFST1dNcTJFV1hhMXc0Uk1odmVMclpJSWtSUVd1ZDg5NzRydzMrbFdpSUUwR0tRVzA3dFc5RUxHQXJXRWR1aENEVWtRWW9Ec1FEd3d3UUpyc2w4SzRPZ0FqUnhtRFpPeS9iem5NUHVnSlQwS0xUeDA2UGxlNGJyWFk4Z2FWTXBFSllSbVlFaGw0cHZJLzgwUnNkVjNENDN3Zm5yWEhlZHFJMXBoaTA2QXcxaHUrMGFiQlVwK1VKNVJsOHd0T0VXOFZJQ0wvcjlCK0xjQnlTYnpIWTlzWjJYbURkYUtQVENVWUtvb2hlbklVS2ZrTHBoUHRFOVVxeGdsdDZNL3htOVJFQlhTOENHRWlkaUU3MEhkWVZMU3VTVU0xNHFuaE5LQ2QyTDNSbXhFd2hnMldNUk1ZeDdCM3dIeFFRU0pnQzF5QkZKMGVuUm1lS2dSQTVKOHJEQStYcGtUcFhQQnQ3Tm5ZU2ttTnlpaTRwdkJhODdIMzZIeEg0dGNjUm1hQmFjSEx4bUl6SVRpZ3pUelA1MDJmeVg1L0o4M1Q0ZFZTOTNYYlQ2MjBmR1FENXB2MFE2TExOTWJJNVU4bzgxVXFiQSs5aWF3T3ZFK00wczgwbjl0T0pKRUZ2cEdpNE90bUM1RTZ5KzlMcllIV25DQTB6eDFOaHFzNGpoVUVCTDlpeXNabnhNZ1pzRzhPZGg1SXBPVlBOeVdTS0JRWGg3cGo3MitSRkZ5dXVhUHltd0pVUm5qQ01iSmxUcW9SZmVudkhPQzhyenk4dnZLd0x5K25FMzQrUGZIbDY0R211MUpRdkNpZ08xZTNJOVFLdWE0c3dNaEYzUkxvY1RzbXBEc0xvSXpodkt6dzN6aitlYWIzVHBvbnk5UXRQL2hVdm42aWxraXhkTXRWUkFOS3ZXWGhWSXBlSm1LUDNleTY4a25CQklaaE56SWpTRzV4L3N2MDhrMnBoOGFDZENzd1pTMER5TitEZkZOYk54eUhySG9GYm9uakVhenZXNkpTMjQvdDJtUlByekZqT2pIVm1KTWR5T2tTL040RGZJc2NZM0ovVVZ4R0JqMEZXVUJUa28wMDlETVpBdlJHdEVXMG5sSy8rK1I5bDlCYi9BL0lWR0FZS3htME5BQUFBQUVsRlRrU3VRbUNDIiAvPgo8L3N2Zz4K 32w, https://d33wubrfki0l68.cloudfront.net/e3c6b8867022a2367f64500b605f19d0b3c3e6b6/0d814/img/containers/assets/blog/business-owner-web-design-options.png/adeecc24d4bcc1e907306ea236449bf7.png 241w, https://d33wubrfki0l68.cloudfront.net/723c78a3b4c7a48354e9ba110d217868a7218e37/05950/img/containers/assets/blog/business-owner-web-design-options.png/e0878022c315a1d660c1e638ce2fe160.png 288w, https://d33wubrfki0l68.cloudfront.net/ddc36e7ddafa6c7b04db37ce11479d741ab6d644/28284/img/containers/assets/blog/business-owner-web-design-options.png/7dad7181568bf4d4b8a33e4ba8056a8e.png 344w, https://d33wubrfki0l68.cloudfront.net/4f3a0d3275ec2a423b47a94f1634de662dcd1d0a/6ea5e/img/containers/assets/blog/business-owner-web-design-options.png/339b48c4fea3001bc882a015db9c1239.png 411w, https://d33wubrfki0l68.cloudfront.net/459c3259f8e2f8a91a08d3664c41298e37f4bfc7/17edc/img/containers/assets/blog/business-owner-web-design-options.png/cd93b7fe6a611fc33d09f771c2756696.png 491w, https://d33wubrfki0l68.cloudfront.net/a2cd09c2a966a4c228e95556a63d586b87257a54/d1ac9/img/containers/assets/blog/business-owner-web-design-options.png/6fcac19156fbe99dfe3a0693131384a4.png 587w, https://d33wubrfki0l68.cloudfront.net/40eb0b9f39ec019372df90e6cb82703426e98db5/16fb1/img/containers/assets/blog/business-owner-web-design-options.png/f9cad971309cc0ce93457dfc8729e3af.png 702w, https://d33wubrfki0l68.cloudfront.net/5bef3e78ef21ae8b9414acdb381f8e5a2ba1f0d5/50c34/img/containers/assets/blog/business-owner-web-design-options.png/8696d9fac01700065c3edcad93893fd6.png 839w, https://d33wubrfki0l68.cloudfront.net/d826ffbbc05fde59db710d2dece65a178f1470fd/e15f0/img/containers/assets/blog/business-owner-web-design-options.png/67f90edf84a4bee8e2c5bb3a6c05e96c.png 1003w, https://d33wubrfki0l68.cloudfront.net/eed6a4cfafebf774b93f7fe244c1e3d90a374264/bcfa5/img/containers/assets/blog/business-owner-web-design-options.png/8dbf19b7a54ca4c5bc4775579cef16d1.png 1200w"
+                                sizes="1px">
+
+                            <img alt="Business owner facing a lot of web design options"
+                                class="h-52 w-full object-cover"
+                                src="https://d33wubrfki0l68.cloudfront.net/bf5ef710b1529de52170740bcc8b331aab06c2ef/61822/assets/blog/business-owner-web-design-options.png"
+                                width="1200" height="630" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="bg-white p-8">
+                            <h1 class="font-bold text-2xl mb-2">3 Tips for Picking <span class="text-blue-900">The Right
+                                    Web Designer</span></h1>
+                            <p class="text-base">January 23rd, 2023</p>
+                        </div>
+                    </a>
+                    <a href=""
+                        class="rounded-3xl overflow-hidden shadow-lg shadow-grey-500/40 hover:-translate-y-1 transition-transform duration-300">
+                        <picture>
+                            <source type="image/webp" media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDE4Ij4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBU0NBWUFBQUE2eU54U0FBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFDZUVsRVFWUklpY1dWNjI0Yk54U0V2em1IdTJzcmRxMjgvL3NWS0ZMVU1KTEc4YTdJeVE4eWttV3BTWW9HS0lHOWtjTXp3M05iL2ZGaTh6K093aS9tUDdlbTcySWxLTCtlOU9kV0FPeWpBTC9DK3NwRzRhdW51Y1QxMlIrZi9Oc29KenVEMkJWVHdXM01CU2o3UlF3U2QvazBqaUZVWUozV2p5YXZFTnVnOFZGT0tHTWZvSDBCUDBOYnV3Vk5FTGVnbS81K0ZIQ0F0dlVuR3JnSkt6R2ltYlAwa29aODZjdy81VVRlb0wxQWZjS0hSMXcvZ28xamg4cDdsQThRdSs2SlZsRjlodm9adFJkUTR0emgzTkUwVXdrT2h0YTZKeVJJaVF4Um9vdndPRW81ZWFxQlgzQjlvcTIvMDlZL2FiVkI3b201RWN1RXNpQVZxRi93K29TMngrNnhYR0RhWTVLcVlIT3lOdGdNdGdtSktZTUZDQW5wVkIrbktuREQzbkQ5bTdvK3NuMyt3S0ZXVkJxRmU2YmNrOXhpRG1qN0JNOS93Y3NINEF1YTdyQm1pRHNjQ3dlTHRjTGFURE9VNktRbGt1SnZPZkJXd0hDRm02aFZIQ3BzRzhoR00yU0RjRU90d2ZZTTYwZFlQNEVPRU1zSWVQZWxFT2l5QkRWdVYzS2daekdhY093ZzMrUFN3QlhLQStROXhFeFBvelo0c3MvRmpNczd5QnNVRTVsSmNUQUxKTk5zY29RZ28xdmdvZ3hSTng0TEtudGlNWk4rSTJwRHVhUE1lNks4NjRRS21HNmg3WEdaSVFQbU81anVVVm1JU0NZQ05TZzJkbzk3Q1NnUjE2cGdsSlVDdEtEeVFHcEIwMHBwaHBpSVhJaWNrUkphOWkwNWd6Y3NvYkpBM3NMQUpDUG1vNzhKQ0kwU2ZOT2pYdVZBZ0FyS0lHSW15bkMxTkJwUmpCZ21SSUZ5MDV2VmNYMWdKRFFFSEh2VW05anJsWW95WnNCR281TkplZHp0dDFrandIbXVmV0NFWHFmaHhXbmZtanIzd0JHdGE0OExRK2Q5VmxmZWZqd2tkUUhmMi9UUC83T2ZvYnFPT2Y4WlhmanAzOVA4bC9FVkgzVC83MVlKUUNBQUFBQUFTVVZPUks1Q1lJST0iIC8+Cjwvc3ZnPgo= 32w, https://d33wubrfki0l68.cloudfront.net/49049f805c2f4e8037f08e2f21752ae9db8f8efc/87226/img/containers/assets/blog/google-analytics.png/ab7a19fb6fbb6bce9b6060407bebe0df.webp 1440w"
+                                sizes="1px">
+
+                            <source media=""
+                                srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDE4Ij4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBU0NBWUFBQUE2eU54U0FBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFDZUVsRVFWUklpY1dWNjI0Yk54U0V2em1IdTJzcmRxMjgvL3NWS0ZMVU1KTEc4YTdJeVE4eWttV3BTWW9HS0lHOWtjTXp3M05iL2ZGaTh6K093aS9tUDdlbTcySWxLTCtlOU9kV0FPeWpBTC9DK3NwRzRhdW51Y1QxMlIrZi9Oc29KenVEMkJWVHdXM01CU2o3UlF3U2QvazBqaUZVWUozV2p5YXZFTnVnOFZGT0tHTWZvSDBCUDBOYnV3Vk5FTGVnbS81K0ZIQ0F0dlVuR3JnSkt6R2ltYlAwa29aODZjdy81VVRlb0wxQWZjS0hSMXcvZ28xamg4cDdsQThRdSs2SlZsRjlodm9adFJkUTR0emgzTkUwVXdrT2h0YTZKeVJJaVF4Um9vdndPRW81ZWFxQlgzQjlvcTIvMDlZL2FiVkI3b201RWN1RXNpQVZxRi93K29TMngrNnhYR0RhWTVLcVlIT3lOdGdNdGdtSktZTUZDQW5wVkIrbktuREQzbkQ5bTdvK3NuMyt3S0ZXVkJxRmU2YmNrOXhpRG1qN0JNOS93Y3NINEF1YTdyQm1pRHNjQ3dlTHRjTGFURE9VNktRbGt1SnZPZkJXd0hDRm02aFZIQ3BzRzhoR00yU0RjRU90d2ZZTTYwZFlQNEVPRU1zSWVQZWxFT2l5QkRWdVYzS2daekdhY093ZzMrUFN3QlhLQStROXhFeFBvelo0c3MvRmpNczd5QnNVRTVsSmNUQUxKTk5zY29RZ28xdmdvZ3hSTng0TEtudGlNWk4rSTJwRHVhUE1lNks4NjRRS21HNmg3WEdaSVFQbU81anVVVm1JU0NZQ05TZzJkbzk3Q1NnUjE2cGdsSlVDdEtEeVFHcEIwMHBwaHBpSVhJaWNrUkphOWkwNWd6Y3NvYkpBM3NMQUpDUG1vNzhKQ0kwU2ZOT2pYdVZBZ0FyS0lHSW15bkMxTkJwUmpCZ21SSUZ5MDV2VmNYMWdKRFFFSEh2VW05anJsWW95WnNCR281TkplZHp0dDFrandIbXVmV0NFWHFmaHhXbmZtanIzd0JHdGE0OExRK2Q5VmxmZWZqd2tkUUhmMi9UUC83T2ZvYnFPT2Y4WlhmanAzOVA4bC9FVkgzVC83MVlKUUNBQUFBQUFTVVZPUks1Q1lJST0iIC8+Cjwvc3ZnPgo= 32w, https://d33wubrfki0l68.cloudfront.net/dd1f9df4ef545358e180d121dae4f85e6649bbfc/2397f/img/containers/assets/blog/google-analytics.png/1dddf756b0487a5ad6b18630d5d4ed1b.png 1440w"
+                                sizes="1px">
+
+                            <img alt="" class="h-52 w-full object-cover"
+                                src="https://d33wubrfki0l68.cloudfront.net/9ed59f6b1e823087c1159baa43e60f78f878a00a/f02af/assets/blog/google-analytics.png"
+                                width="1440" height="810" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="bg-white p-8">
+                            <h1 class="font-bold text-2xl mb-2">How To Lazy-load <span class="text-blue-900">Google
+                                    Analytics</span></h1>
+                            <p class="text-base">November 30th, 2022</p>
+                        </div>
+                    </a>
+
+                </div>
+                <a href="https://000bloggynayem.000webhostapp.com/" target="_blank"
+                    class="w-full flex justify-end group">
+                    <p class="group-hover:text-blue-900 mr-2">View all</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                        class="w-3 fill-current group-hover:text-blue-900">
+                        <path
+                            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- contact me -->
+        <div id="connect" class="container" data-aos="fade-up">
+            <div class="bg-blue-300 rounded-3xl py-24 lg:pt-24 lg:pb-12 px-12">
+                <div class="text-center">
+                    <h3 class="font-bold uppercase tracking-widest text-grey-600 mb-4">Contact Me</h3>
+                    <h2 class="title text-4xl">Got a Project? Lets Talk!</h2>
+                    <div class="flex flex-col sm:flex-row justify-center items-center mt-12">
+                        <picture>
+                            <img class="w-12 mr-4" src="assets/images/icons/mail.png" alt="mail.svg" width="48"
+                                height="48">
+                        </picture>
+
+                        <a href="mailto:dev.nayem11@gmail.com?subject=Wanted to chat about..."
+                            class="text-xl sm:text-3xl text-grey-600 font-bold tracking-tight hover:underline"
+                            target="_blank">dev.nayem11@gmail.com</a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex justify-between items-center mt-24">
+                    <a href="" class="flex-grow text-3xl">👋</a>
+                    <div class="flex gap-12 font-bold items-center">
+                        <a href="#services" class="link">Services</a>
+                        <a href="#portfolio" class="link">Portfolio</a>
+                        <a href="#testimonials" class="link">Testimonials</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+
+        <div class="container py-12 text-center">
+            <p class="text-base text-grey-600">© 2023 - 2023 Nayem Uddin. All rights reserved.</p>
+        </div>
+    </div>
+
+
+    <script src="assets/js/site.js"></script>
+
+    <!-- Google Analytics load on scroll -->
+    <script>
+        function analyticsOnScroll() {
+            var head = document.getElementsByTagName('head')[0]
+            var script = document.createElement('script')
+            script.type = 'text/javascript';
+            script.src = 'googletag.js'
+            head.appendChild(script);
+
+            document.removeEventListener('scroll', analyticsOnScroll);
+        };
+
+        document.addEventListener('scroll', analyticsOnScroll);
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H7N1XHH71J');
+    </script>
+</body>
+
+</html>
