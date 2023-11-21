@@ -1799,7 +1799,7 @@ p {
   background-color: rgb(255 244 228 / var(--tw-bg-opacity));
 }
 .fill-current {
-  fill: currentColor;
+  fill: #130f49;
 }
 .stroke-grey-300 {
   stroke: #f8f8fa;
