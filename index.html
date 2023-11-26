@@ -52,7 +52,7 @@
 
                     <div class="w-full h-full flex justify-end items-center">
                         <div class="w-10 h-10 cursor-pointer relative stroke-primary">
-                            <div id="btn" class="w-10 h-10 cursor-pointer relative fill-current text-primary"
+                            <div id="btn" class="w-10 h-10 cursor-pointer relative fill-current text-blue-500 hover:text-blue-700 focus:outline-none"
                                 @click="
                             open = !open, 
                             open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())
@@ -77,7 +77,7 @@
                     <a href="#testimonials" class="block font-semibold text-3xl py-8"
                         @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Testimonials</a>
 
-                    <a href="blog" class="block font-semibold text-3xl py-8"
+                    <a href="#blog" class="block font-semibold text-3xl py-8"
                         @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Blog</a>
 
                     <a href="#connect" class="block font-semibold text-3xl py-8"
@@ -88,7 +88,7 @@
         </div>
         <div id="mobile-menu" class="absolute inset-0 z-20 bg-blue-300 overflow-scroll hidden">
             <div class="h-28 bg-blue-300 fixed z-40 w-full"></div>
-            <nav class="mt-28 pb-12 container grid grid-cols-1 divide-y divide-purple-500 divide-opacity-50">
+            <nav class="mt-28 pb-5 container grid grid-cols-1 divide-y divide-purple-500 divide-opacity-50">
 
                 <a href="#services" class="block font-semibold text-3xl py-8">Services</a>
 
@@ -104,7 +104,7 @@
         </div>
 
         <header>
-            <div class="container grid lg:grid-cols-2 gap-12 items-center pt-36 lg:pt-28 pb-24 lg:pb-48">
+            <div class="container grid sm:grid-cols-2 gap-12 items-center pt-36 lg:pt-28 pb-24 lg:pb-48">
 
                 <div class="relative" data-aos="fade">
                     <script>
@@ -304,35 +304,11 @@
                     <h2 class="title">Recent Work</h2>
                 </div>
                 <div class="grid sm:grid-cols-3 gap-8 mt-24">
-                    <a href="https://000bloggynayem.000webhostapp.com" target="_blank" data-aos="fade-right"
-                        class="relative">
+
+                    <a href="https://000bloggynayem.000webgostapp.com" target="_blank" data-aos="fade-left" class="relative">
                         <picture>
-                            <img alt="Flint Learning Solutions etobicoke web design"
-                                style="width: 100%; height: 105%; border-radius: 20px;"
-                                src="assets/images/projects/bloggy.png" data-statamic-responsive-images>
-                        </picture>
-
-                        <div
-                            class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
-                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
-                            <div
-                                class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
-                                <picture>
-
-                                    <img alt="open car sales website" class="w-5 mb-1"
-                                        src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg"
-                                        width="448" height="512">
-                                </picture>
-
-                                <p class="text-white">bloggy.com</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://bitspondon.com" target="_blank" data-aos="fade-up" class="relative">
-                        <picture>
-                            <img alt="Canada 1 Car Sales etobicoke website design" class="rounded-3xl"
-                                src="assets/images/projects/bitspondon.png" style="height: 105%; width:100%;"
+                            <img alt="Lather and Steel web design" class="rounded-3xl"
+                                src="assets/images/projects/bloggy.png" style="height: 100%; width:100%;"
                                 data-statamic-responsive-images>
                         </picture>
 
@@ -342,7 +318,28 @@
                             <div
                                 class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
                                 <picture>
+                                    <img alt="open car sales website" class="w-5 mb-1"
+                                        src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg"
+                                        width="448" height="512">
+                                </picture>
+                                <p class="text-white">bloggy.com</p>
+                            </div>
+                        </div>
+                    </a>
 
+                    <a href="https://bitspondon.com" target="_blank" data-aos="fade-left" class="relative">
+                        <picture>
+                            <img alt="Lather and Steel web design" class="rounded-3xl"
+                                src="assets/images/projects/bitsweb new.png" style="height: 100%; width:100%;"
+                                data-statamic-responsive-images>
+                        </picture>
+
+                        <div
+                            class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div
+                                class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
                                     <img alt="open car sales website" class="w-5 mb-1"
                                         src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg"
                                         width="448" height="512">
@@ -352,11 +349,11 @@
                             </div>
                         </div>
                     </a>
-
+                    
                     <a href="https://bitspondon.com" target="_blank" data-aos="fade-left" class="relative">
                         <picture>
                             <img alt="Lather and Steel web design" class="rounded-3xl"
-                                src="assets/images/projects/bitTube.png" style="height: 105%; width:100%;"
+                                src="assets/images/projects/bitspondon.png" style="height: 100%; width:100%;"
                                 data-statamic-responsive-images>
                         </picture>
 
@@ -375,7 +372,54 @@
                             </div>
                         </div>
                     </a>
+                    
+                    <a href="https://bitspondon.com" target="_blank" data-aos="fade-left" class="relative">
+                        <picture>
+                            <img alt="Lather and Steel web design" class="rounded-3xl"
+                                src="assets/images/projects/bitTube.png" style="height: 100%; width:100%;"
+                                data-statamic-responsive-images>
+                        </picture>
 
+                        <div
+                            class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div
+                                class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+                                    <img alt="open car sales website" class="w-5 mb-1"
+                                        src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg"
+                                        width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">lms.bitspondon.com</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    <a href="#" target="_blank" data-aos="fade-left" class="relative">
+                        <picture>
+                            <img alt="Lather and Steel web design" class="rounded-3xl"
+                                src="assets/images/projects/darul-falah.png" style="height: 100%; width:100%;"
+                                data-statamic-responsive-images>
+                        </picture>
+
+                        <div
+                            class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div
+                                class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+                                    <img alt="open car sales website" class="w-5 mb-1"
+                                        src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg"
+                                        width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">Development Mode</p>
+                            </div>
+                        </div>
+                    </a>
+                    
 
                     <div class="rounded-3xl relative overflow-hidden pb-[100%]" data-aos="fade-up">
                         <div class="z-50 absolute inset-0 flex flex-col justify-center text-center items-center">
